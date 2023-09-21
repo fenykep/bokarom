@@ -1,0 +1,49 @@
+html {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Apply styles to the table */
+table {
+    width: 100%;
+    height: calc(100vh - 20px); /* Adjust as needed */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 3px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+td:not(.occupied) {
+    color: #777;
+}
+
+/* Apply styles to the first row (weekdays) */
+th:first-child {
+    font-weight: bold;
+}
+
+/* Add a vertical scrollbar when content overflows the table body */
+tbody {
+    max-height: calc(100vh - 100px); /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.occupied{
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+.Sop{
+    border-bottom: dotted 5px lightcyan;
+/*    border-top-left-radius: 15px;*/
+/*    border-top-right-radius: 15px;*/
+}
+.Nop{
+    border-top: solid 3px lightgreen;
+/*    border-bottom-left-radius: 15px;*/
+/*    border-bottom-right-radius: 15px;*/
+}
