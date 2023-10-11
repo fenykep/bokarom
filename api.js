@@ -30,6 +30,17 @@ const lookupData = {
   }
 }
 
+// fetch('db.json') // Relative path to the JSON file
+//     .then(response => response.json())
+//     .then(data => {
+//         // Do something with the JSON data
+//         console.log(data);
+//     })
+//     .catch(error => {
+//         console.error('Error fetching JSON:', error);
+//     });
+
+
 function hexStringToArray(hexString) {
     if (hexString.length % 2 !== 0) {
         throw new Error("Hex string must have an even number of characters.");
