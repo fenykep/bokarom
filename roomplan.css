@@ -1,0 +1,123 @@
+main{
+	
+	background-size: cover;
+	height: 800px;
+	
+}
+
+#upFloor{
+	aspect-ratio: 1368 / 498;
+	background-image: url("alsoOG.png");
+}
+
+.room{
+	background-color: rgba(150, 50, 50, 0.7);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+}
+
+#u1{
+	top: 10px;
+	left: 1270px;
+	width: 180px;
+	height: 217px;
+}
+
+#u2 {
+    top: 10px;
+    left: 1568px;
+    width: 120px;
+    height: 217px;
+}
+
+#u3 {
+    top: 10px;
+    left: 1688px;
+    width: 116px;
+    height: 217px;
+}
+
+#u4 {
+    top: 10px;
+    left: 1805px;
+    width: 108px;
+    height: 217px;
+}
+
+#u5 {
+	top: 590px;
+	left: 1688px;
+	width: 221px;
+	height: 217px;
+}
+
+#u6 {
+	top: 590px;
+	left: 1568px;
+	width: 117px;
+	height: 217px;
+}
+
+#u7 {
+	top: 590px;
+	left: 1450px;
+	width: 116px;
+	height: 217px;
+}
+
+#u8 {
+	top: 590px;
+	left: 1332px;
+	width: 116px;
+	height: 217px;
+}
+
+#u9 {
+	top: 590px;
+	left: 1214px;
+	width: 115px;
+	height: 217px;
+}
+
+#u10 {
+	top: 590px;
+	left: 1096px;
+	width: 115px;
+	height: 217px;
+}
+
+#u11 {
+    top: 590px;
+    left: ;
+    width: ;
+    height: 217px;
+}
+
+#u12 {
+    top: 590px;
+    left: ;
+    width: ;
+    height: 217px;
+}
+
+#u13 {
+    top: 590px;
+    left: ;
+    width: ;
+    height: 217px;
+}
+
+#u14 {
+    top: 590px;
+    left: ;
+    width: ;
+    height: 217px;
+}
+
+#u15 {
+    top: 590px;
+    left: ;
+    width: ;
+    height: 217px;
+}

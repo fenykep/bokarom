@@ -1,0 +1,80 @@
+<tr>                                                                            
+    <td>08:00</td>
+    <td id="dr000">Data</td>
+    <td id="dr040">Data</td>
+    <td id="dr080">Data</td>
+    <td id="dr120">Data</td>
+    <td id="dr160">Data</td>
+</tr>
+<tr>                                                                            
+    <td>09:00</td>
+    <td id="dr004">Data</td>
+    <td id="dr044">Data</td>
+    <td id="dr084">Data</td>
+    <td id="dr124">Data</td>
+    <td id="dr164">Data</td>
+</tr>
+<tr>                                                                            
+    <td>10:00</td>
+    <td id="dr008">Data</td>
+    <td id="dr048">Data</td>
+    <td id="dr088">Data</td>
+    <td id="dr128">Data</td>
+    <td id="dr168">Data</td>
+</tr>
+<tr>                                                                            
+    <td>11:00</td>
+    <td id="dr012">Data</td>
+    <td id="dr052">Data</td>
+    <td id="dr092">Data</td>
+    <td id="dr132">Data</td>
+    <td id="dr172">Data</td>
+</tr>
+<tr>                                                                            
+    <td>12:00</td>
+    <td id="dr016">Data</td>
+    <td id="dr056">Data</td>
+    <td id="dr096">Data</td>
+    <td id="dr136">Data</td>
+    <td id="dr176">Data</td>
+</tr>
+<tr>                                                                            
+    <td>13:00</td>
+    <td id="dr020">Data</td>
+    <td id="dr060">Data</td>
+    <td id="dr100">Data</td>
+    <td id="dr140">Data</td>
+    <td id="dr180">Data</td>
+</tr>
+<tr>                                                                            
+    <td>14:00</td>
+    <td id="dr024">Data</td>
+    <td id="dr064">Data</td>
+    <td id="dr104">Data</td>
+    <td id="dr144">Data</td>
+    <td id="dr184">Data</td>
+</tr>
+<tr>                                                                            
+    <td>15:00</td>
+    <td id="dr028">Data</td>
+    <td id="dr068">Data</td>
+    <td id="dr108">Data</td>
+    <td id="dr148">Data</td>
+    <td id="dr188">Data</td>
+</tr>
+<tr>                                                                            
+    <td>16:00</td>
+    <td id="dr032">Data</td>
+    <td id="dr072">Data</td>
+    <td id="dr112">Data</td>
+    <td id="dr152">Data</td>
+    <td id="dr192">Data</td>
+</tr>
+<tr>                                                                            
+    <td>17:00</td>
+    <td id="dr036">Data</td>
+    <td id="dr076">Data</td>
+    <td id="dr116">Data</td>
+    <td id="dr156">Data</td>
+    <td id="dr196">Data</td>
+</tr>
