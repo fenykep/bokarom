@@ -1,36 +1,38 @@
 :root {
-	--fullBlack: #000;
-	--grey: #777;
-	--white: #fff;
+    --fullBlack: #000;
+    --grey: #777;
+    --white: #fff;
 }
 
 .dark {
-	--fullBlack: #000;
-	--grey: #ddd;
-	--white: #333;
+    --fullBlack: #000;
+    --grey: #ddd;
+    --white: #333;   
 }
 
 html {
-	font-family: monospace;
-	font-weight: bold;
-	font-size: 1.3em;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 body {
     margin: 0;
 }
 
+/* Apply styles to the table */
 table {
     width: 100%;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 20px); /* Adjust as needed */
     border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
     border: 3px solid #ccc;
     padding: 10px;
     text-align: center;
+    box-sizing: border-box;
+    user-select: none;
 }
 
 td:not(.occupied) {
@@ -45,19 +47,53 @@ th:first-child {
 
 /* Add a vertical scrollbar when content overflows the table body */
 tbody {
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px); /* Adjust as needed */
     overflow-y: auto;
 }
 
-.occupied {
+.occupied{
     background-color: lightseagreen;
     cursor: pointer;
 }
 
-.Sop {
+.Sop{
     border-bottom: dotted 5px lightcyan;
 }
-
-.Nop {
+.Nop{
     border-top: solid 3px lightgreen;
+}
+
+.selected {
+    border: 5px solid blue; /* Adjust the border thickness as needed */
+    background-color: lightblue; /* Adjust the background color to your preference */
+    color: black; /* Adjust text color as needed */
+}
+
+.floatbtn{
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#delbtn{
+    left: 10vw;
+    bottom: 10vw;
+    background-color: rgb(255, 87, 51);
+}
+
+#resbtn{
+    right: 10vw;
+    bottom: 10vw;
+    background-color: rgb(65, 255, 51);
+}
+
+#delbtn svg path{
+    transform-origin: bottom left;
+    transition: transform 0.4s ease;
+}
+
+.opencan{
+    transform: rotate(18deg) translateY(-16%) translateX(5%);
 }
