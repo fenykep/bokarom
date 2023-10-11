@@ -1,0 +1,188 @@
+:root {
+    --fullBlack: #000;
+    --grey: #777;
+    --white: #fff;
+}
+
+.dark {
+    --fullBlack: #000;
+    --grey: #ddd;
+    --white: #333;   
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('fonts/Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#cardModal{
+    display: grid;
+    grid-template-columns: 200px 1.7fr .3fr;
+    grid-template-rows: 100px 100px auto;
+    /*grid-column-gap: 2px;
+    grid-row-gap: 2px;*/
+
+    border: 4px solid #2ad587;
+    border-radius: 10px;
+
+    width: 600px;
+    height: 250px;
+
+    font-size: 30px;
+    font-family: "Avenir-Roman", sans-serif;
+}
+
+#cardModal *{
+
+}
+#cardModal img{
+    grid-area: 1 / 1 / 3 / 2;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2ad587;
+
+    box-sizing: border-box;
+    margin: 20px;
+}
+#cardModal h1{
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+
+    font-size: 1.3em;
+    text-decoration: 2px solid underline;
+    align-self: center;
+
+    font-weight: normal;
+}
+#cardModal h2{
+    grid-area: 2 / 2 / 3 / 4;
+    margin: 0;
+    font-weight: normal;
+}
+#cardModal button{
+    grid-area: 1 / 3 / 2 / 4;
+    
+    font-family: monospace;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+
+    justify-self: end;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#cardModal div{
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: linear-gradient(45deg, rgba(42,213,135,1) 30%, rgba(220,240,220,1) 35%, rgba(213,42,120,1) 40%);
+    border-radius: 0 0 5px 5px;
+}
+#cardModal div p{
+    margin: 0;
+}
+
+html {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+body {
+    margin: 0;
+}
+
+/* Apply styles to the table */
+table {
+    width: 100%;
+    height: calc(100vh - 20px); /* Adjust as needed */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 0px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+table tr{
+    display: none;
+}
+
+table tr:nth-child(4n+1){
+    display: block;
+}
+
+td:not(.occupied) {
+    color: var(--grey);
+    background-color: var(--white);
+}
+
+/* Apply styles to the first row (weekdays) */
+th:first-child {
+    font-weight: bold;
+}
+
+/* Add a vertical scrollbar when content overflows the table body */
+tbody {
+    max-height: calc(100vh - 100px); /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.occupied{
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+.Sop{
+    border-bottom: dotted 5px lightcyan;
+}
+.Nop{
+    border-top: solid 3px lightgreen;
+}
+
+.selected {
+    border: 5px solid blue; /* Adjust the border thickness as needed */
+    background-color: lightblue; /* Adjust the background color to your preference */
+    color: black; /* Adjust text color as needed */
+}
+
+.floatbtn{
+    position: fixed;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#delbtn{
+    left: 10vw;
+    bottom: 10vw;
+    background-color: rgb(255, 87, 51);
+}
+
+#resbtn{
+    right: 10vw;
+    bottom: 10vw;
+    background-color: rgb(65, 255, 51);
+}
+
+#delbtn svg path{
+    transform-origin: bottom left;
+    transition: transform 0.4s ease;
+}
+
+.opencan{
+    transform: rotate(18deg) translateY(-16%) translateX(5%);
+}
