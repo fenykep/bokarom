@@ -7,6 +7,8 @@ use tokio::net::{TcpListener, TcpStream};
 use std::{collections::HashSet, env, io::Error};
 use tokio_tungstenite::tungstenite::protocol::Message;
 use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
+use std::fs::File;
+use std::io::{Read, Write};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -32,7 +34,7 @@ async fn main() -> Result<(), Error> {
     }
 
 
-
+    println!("we started up, gotta load the saved stuff now");
     // Define the WebSocket server on port 8080
     // let addr = env::args().nth(1).unwrap_or_else(|| "192.168.1.4:8080".to_string());
     let addr = format!("{:?}:8080",my_local_ip.unwrap());
