@@ -1,14 +1,16 @@
 use log::info;
 use warp::Filter;
-use std::sync::{Arc, Mutex};
+use std::fs::File;
+use std::io::{Read, Write};
+use std::sync::{Arc};
+// use std::sync::{Arc, Mutex};
+use tokio::sync::Mutex;
 use local_ip_address::local_ip;
 use tokio_tungstenite::accept_async;
 use tokio::net::{TcpListener, TcpStream};
 use std::{collections::HashSet, env, io::Error};
 use tokio_tungstenite::tungstenite::protocol::Message;
 use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
-use std::fs::File;
-use std::io::{Read, Write};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -88,8 +90,9 @@ async fn handle_connection(
         // Send a welcome message to the client
         // let welcome_message = "00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100";
         // To access the shared variable:
-        let in_mem_hex_string = in_mem_hex_string.lock().unwrap();
-        let welcome_message = in_mem_hex_string.as_str();        
+        let in_mem_hex_string = in_mem_hex_string.lock().await;
+        let welcome_message = in_mem_hex_string.as_str();
+        println!("this will be the welcommessage: {}", welcome_message);        
         if ws_sink.send(Message::Text(welcome_message.to_string())).await.is_err() {
             return; // Exit the task if sending the welcome message fails
         }
