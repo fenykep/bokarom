@@ -21,6 +21,8 @@ async fn main() -> Result<(), Error> {
     let html = warp::fs::dir(current_dir);
 
     let http_server = warp::serve(html);
+
+   let in_mem_hex_string = String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100");
     
     if let Ok(my_local_ip) = my_local_ip {
         println!("This is my local IP address: {:?}", my_local_ip);
@@ -87,15 +89,6 @@ async fn handle_connection(
             }
         }
 
-        // while let Some(msg) = rx.recv().await.ok() {
-        //     if &ws_sink_clone as *const _ != &ws_sink as *const _ {
-        //         if ws_sink.send(msg).await.is_err() {
-        //             break;
-        //         }
-        //     }
-        // }
-
-        // while let Some(msg) = rx.recv().await.ok() {
         //     // Exclude the sender by checking if the WebSocket sink matches the current client's sink
         //     if let Err(_) = ws_sink_arc.lock().unwrap().send(msg.clone()).await {
         //         break;
