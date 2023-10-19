@@ -1,0 +1,4 @@
+write central db at every click, refresh at every click
+on my own page, need to be able to reserve every Tuesday 11:30-14:30 between September and November
+full floorplan, minimap widget for roomselection, coffee-radius, printer
+

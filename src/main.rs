@@ -4,6 +4,7 @@ use std::fs::File;
 use std::io::{Read, Write};
 use std::sync::{Arc};
 // use std::sync::{Arc, Mutex};
+// use std::sync::Arc;
 use tokio::sync::Mutex;
 use local_ip_address::local_ip;
 use tokio_tungstenite::accept_async;
@@ -29,6 +30,9 @@ async fn main() -> Result<(), Error> {
    let in_mem_hex_string = Arc::new(Mutex::new(
         String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100"),
     ));
+
+   // let in_mem_hex_string: Box<String> = Box::new("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100".to_string());
+   // let leaked_hex_string: &'static mut String = Box::leak(in_mem_hex_string);
     
     if let Ok(my_local_ip) = my_local_ip {
         println!("This is my local IP address: {:?}", my_local_ip);
@@ -58,9 +62,11 @@ async fn main() -> Result<(), Error> {
     while let Ok((stream, _)) = listener.accept().await {
         let tx = tx.clone(); // Clone the broadcast sender for each connection
         // tokio::spawn(handle_connection(stream, tx));
+        let in_mem_hex_string_clone = Arc::clone(&in_mem_hex_string);
 
-        let in_mem_hex_string_clone = in_mem_hex_string.clone(); // Clone the Arc
+        //let in_mem_hex_string_clone = in_mem_hex_string.clone(); // Clone the Arc
         tokio::spawn(handle_connection(stream, tx, in_mem_hex_string_clone));
+        // tokio::spawn(handle_connection(stream, tx, leaked_hex_string));
     }
 
     Ok(())
@@ -70,9 +76,17 @@ async fn handle_connection(
     stream: TcpStream,
     tx: tokio::sync::broadcast::Sender<Message>,
     in_mem_hex_string: Arc<Mutex<String>>,
+    // leaked_db: &'static String,
 ) {
     // let addr = stream.peer_addr().expect("connected streams should have a peer address");
     // info!("Peer address: {}", addr);
+
+    // let db_clone = leaked_db.clone();
+    // Clone the in-memory hex string for this connection's welcome message
+    let welcome_message = {
+        let in_mem_hex_string = in_mem_hex_string.lock().await;
+        in_mem_hex_string.clone()
+    };
 
     let ws_stream = tokio_tungstenite::accept_async(stream)
         .await
@@ -90,14 +104,30 @@ async fn handle_connection(
         // Send a welcome message to the client
         // let welcome_message = "00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100";
         // To access the shared variable:
-        let in_mem_hex_string = in_mem_hex_string.lock().await;
-        let welcome_message = in_mem_hex_string.as_str();
+        // let in_mem_hex_string = in_mem_hex_string.lock().await;
+        // let welcome_message = in_mem_hex_string.as_str();
+
         println!("this will be the welcommessage: {}", welcome_message);        
         if ws_sink.send(Message::Text(welcome_message.to_string())).await.is_err() {
             return; // Exit the task if sending the welcome message fails
         }
 
+        // // old version that works but without the inMemVariable
+        // while let Some(msg) = rx.recv().await.ok() {
+        //     if ws_sink.send(msg).await.is_err() {
+        //         break;
+        //     }
+        // }
+
+        // this is the new one that tries to pass down the pointer, lets see if it works
         while let Some(msg) = rx.recv().await.ok() {
+            // Update the in-memory hex string with the received message
+            let mut in_mem_hex_string = in_mem_hex_string.lock().await;
+            *in_mem_hex_string = msg.to_string();
+
+            // Broadcast the updated in-memory hex string to all clients
+            let updated_message = in_mem_hex_string.clone();
+            //tx.send(Message::Text(updated_message)).ok();
             if ws_sink.send(msg).await.is_err() {
                 break;
             }
