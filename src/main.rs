@@ -34,7 +34,7 @@ async fn main() -> Result<(), Error> {
 
     // Define the HTTP server (serving the HTML file) on port 3030
     let current_dir = std::env::current_dir().expect("failed to read current directory");
-    let html = warp::fs::dir(current_dir);
+    let html = warp::fs::dir(current_dir.join("static"));
 
     let http_server = warp::serve(html);
 
@@ -59,16 +59,10 @@ async fn main() -> Result<(), Error> {
 
     // // This was commented out to read from file, but maybe youll have to revert that
     // let in_mem_hex_string = Arc::new(Mutex::new(
-    //      String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100"),
+    //      String::from("00113c33c3c3c00"),
     //  ));
 
     let in_mem_hex_string = Arc::new(Mutex::new(file_content));
-
-    // this doesnt work, you cant print this kinda pointer like whatever without locking it up
-    // println!("{}", in_mem_hex_string);
-
-    // let in_mem_hex_string: Box<String> = Box::new("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100".to_string());
-    // let leaked_hex_string: &'static mut String = Box::leak(in_mem_hex_string);
 
     if let Ok(my_local_ip) = my_local_ip {
         println!("This is my local IP address: {:?}", my_local_ip);
