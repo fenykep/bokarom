@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('fonts/Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#cardModal{
+    display: grid;
+    grid-template-columns: 200px 1.7fr .3fr;
+    grid-template-rows: 100px 100px auto;
+    /*grid-column-gap: 2px;
+    grid-row-gap: 2px;*/
+
+    border: 4px solid #2ad587;
+    border-radius: 10px;
+
+    width: 600px;
+    height: 250px;
+
+    font-size: 30px;
+    font-family: "Avenir-Roman", sans-serif;
+}
+
+#cardModal *{
+
+}
+#cardModal img{
+    grid-area: 1 / 1 / 3 / 2;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2ad587;
+
+    box-sizing: border-box;
+    margin: 20px;
+}
+#cardModal h1{
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+
+    font-size: 1.3em;
+    text-decoration: 2px solid underline;
+    align-self: center;
+
+    font-weight: normal;
+}
+#cardModal h2{
+    grid-area: 2 / 2 / 3 / 4;
+    margin: 0;
+    font-weight: normal;
+}
+#cardModal button{
+    grid-area: 1 / 3 / 2 / 4;
+    
+    font-family: monospace;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+
+    justify-self: end;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#cardModal div{
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: linear-gradient(45deg, rgba(42,213,135,1) 30%, rgba(220,240,220,1) 35%, rgba(213,42,120,1) 40%);
+    border-radius: 0 0 5px 5px;
+}
+#cardModal div p{
+    margin: 0;
+}

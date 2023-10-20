@@ -10,6 +10,13 @@
     --white: #333;   
 }
 
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('fonts/Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     font-family: monospace;
     font-weight: bold;

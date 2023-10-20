@@ -1,32 +1,39 @@
-const idToken = {
-    "hexID":"3c"
+var idToken = {
+    "hexID":"3c",
+    "hexAlias":"3c",
+    "allowedAlia":["3c","11"]
 }
 
 const lookupData = {
   "ff": {
     "hexColor": "#FF5733",
     "fullName": "John Doe",
-    "email": "john.doe@example.com"
+    "email": "john.doe@example.com",
+    "allowedAlia":["ff"]
   },
   "11": {
     "hexColor": "#41FF33",
     "fullName": "Jane Smith",
-    "email": "jane.smith@example.com"
+    "email": "jane.smith@example.com",
+    "allowedAlia":["11"]
   },
   "3c": {
     "hexColor": "#3344FF",
     "fullName": "Mary Johnson",
-    "email": "mary.johnson@example.com"
+    "email": "mary.johnson@example.com",
+    "allowedAlia":["3c","11"]
   },
   "7a": {
     "hexColor": "#FF3388",
     "fullName": "Robert Brown",
-    "email": "robert.brown@example.com"
+    "email": "robert.brown@example.com",
+    "allowedAlia":["7a"]
   },
   "b2": {
     "hexColor": "#AA88FF",
     "fullName": "Emily Davis",
-    "email": "emily.davis@example.com"
+    "email": "emily.davis@example.com",
+    "allowedAlia":["b2"]
   }
 }
 
@@ -137,10 +144,33 @@ const serverIP = window.location.hostname;
 const socket = new WebSocket('ws://'+serverIP+':8080');
 // const socket = new WebSocket('ws://192.168.45.33:8080');
 
+let selectElement = document.querySelector("#alias-select");
+
 // Event handler for when the connection is established
 socket.addEventListener('open', (event) => {
     console.log('WebSocket connection established.');
+
+    let aliasSelector = document.querySelector("#aliasSelector");
+
+    if (idToken.allowedAlia.length > 1) {
+        // Loop through the array and create an <option> element for each value
+        for (var i = 0; i < idToken.allowedAlia.length; i++) {
+            var option = document.createElement("option");
+            option.value = idToken.allowedAlia[i];
+            option.text = lookupData[idToken.allowedAlia[i]].fullName;
+            selectElement.appendChild(option);
+        }
+        aliasSelector.style.display = "block";
+    }
     // Itt kéne megkapnija az identitijét is, pl meg custom variablek
+});
+
+
+
+selectElement.addEventListener("change", function() {
+    // Update the idToken.hexAlias with the selected value
+    idToken.hexAlias = selectElement.value;
+    console.log(selectElement.value);
 });
 
 // // Event handler for the "Send" button click
@@ -181,3 +211,9 @@ socket.addEventListener('error', (event) => {
 const wordArray = hexStringToArray(hexString);
 console.log(wordArray);
 colorOccupied(wordArray);
+
+
+
+function changeAlias(){
+    document.querySelector("#aliasSelector")
+}

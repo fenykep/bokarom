@@ -9,7 +9,7 @@ document.addEventListener('mousedown', (e) => {
         startCell = e.target;
         if (!isDeletemode) {
             startCell.classList.add('selected');
-            updateReserveMask(Number(e.target.id.replace('dr','')),idToken.hexID, reserveMask);
+            updateReserveMask(Number(e.target.id.replace('dr','')),idToken.hexAlias, reserveMask);
         } else {
             startCell.classList.remove('selected');
             updateReserveMask(Number(e.target.id.replace('dr','')),"00", reserveMask);
@@ -28,7 +28,7 @@ document.querySelectorAll('td[id^="dr"]').forEach((cell) => {
             currentCell.classList.add('selected');
             if (!isDeletemode) {
                 currentCell.classList.add('selected');
-                updateReserveMask(Number(currentCell.id.replace('dr','')),idToken.hexID, reserveMask);
+                updateReserveMask(Number(currentCell.id.replace('dr','')),idToken.hexAlias, reserveMask);
             } else {
                 currentCell.classList.remove('selected');
                 updateReserveMask(Number(currentCell.id.replace('dr','')),"00", reserveMask);
