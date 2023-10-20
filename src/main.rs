@@ -15,6 +15,15 @@ use tokio::sync::Mutex;
 use tokio_tungstenite::accept_async;
 use tokio_tungstenite::tungstenite::protocol::Message;
 
+
+// this is now new, uncoplete, first set static to r0142 then 
+// youll have to start the pers/week/room muxing
+fn write_content_to_file<T: AsRef<str>>(file_path: &str, content: T) -> Result<(), std::io::Error> {
+    let mut file = File::create(file_path)?;
+    file.write_all(content.as_ref().as_bytes())?;
+    Ok(())
+}
+
 // rustfmt: format buffer (bc the prettier is not v1.0 yet, Id rather not build it into my pipe)
 
 #[tokio::main]
@@ -39,7 +48,7 @@ async fn main() -> Result<(), Error> {
 
     //  let file_path ="db/r_01_42.wek";
     let file_path = format!("db/r_01_{}.wek", weekno.to_string());
-    println!("{}", format!("db/r_01_{}.wek", weekno.to_string()));
+    println!("{}", file_path);
     // let file_path = String::from("db/r_01_{}.wek",weekno);
 
     // Read the content from the file into a string
