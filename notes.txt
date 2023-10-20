@@ -2,3 +2,4 @@ write central db at every click, refresh at every click
 on my own page, need to be able to reserve every Tuesday 11:30-14:30 between September and November
 full floorplan, minimap widget for roomselection, coffee-radius, printer
 
+type[r/p](room/person)_hexID[00-ff]_weekno[1-53].wek

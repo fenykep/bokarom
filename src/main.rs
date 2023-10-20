@@ -1,3 +1,4 @@
+use std::io;
 use log::info;
 use warp::Filter;
 use std::fs::File;
@@ -12,6 +13,7 @@ use tokio::net::{TcpListener, TcpStream};
 use std::{collections::HashSet, env, io::Error};
 use tokio_tungstenite::tungstenite::protocol::Message;
 use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
+use chrono::{TimeZone, NaiveDateTime, Utc, Datelike, Weekday, NaiveDate};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
@@ -25,11 +27,27 @@ async fn main() -> Result<(), Error> {
 
     let http_server = warp::serve(html);
 
-   // let in_mem_hex_string = String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100");
 
-   let in_mem_hex_string = Arc::new(Mutex::new(
-        String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100"),
-    ));
+   let file_path = "db/r_01_42.wek";
+
+   // Read the content from the file into a string
+   // let mut file = File::open(file_path)?;
+   let mut file_content = String::new();
+   File::open(file_path)?.read_to_string(&mut file_content)?;
+   // file.read_to_string(&mut file_content)?;
+
+   // println!("File Content: {}", file_content);
+
+   // // This was commented out to read from file, but maybe youll have to revert that
+   // let in_mem_hex_string = Arc::new(Mutex::new(
+   //      String::from("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100"),
+   //  ));
+
+   let in_mem_hex_string = Arc::new(Mutex::new(file_content));
+
+   // this doesnt work, you cant print this kinda pointer like whatever without locking it up
+   // println!("{}", in_mem_hex_string);
+
 
    // let in_mem_hex_string: Box<String> = Box::new("00111111000000000000000000000000000000000011111111111100000000000000003c3c3c3c3c3c3c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000003c3c3c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000001100".to_string());
    // let leaked_hex_string: &'static mut String = Box::leak(in_mem_hex_string);
@@ -45,8 +63,16 @@ async fn main() -> Result<(), Error> {
         println!("Error getting local IP: {:?}", my_local_ip);
     }
 
+    // Current time in UTC
+    let now_utc = Utc::now();
+    // Current date in UTC
+    let today_utc = now_utc.date_naive();
+    println!("Date now: {}", today_utc);
+    println!("Week number: {}", today_utc.iso_week().week());
+
 
     println!("we started up, gotta load the saved stuff now");
+
     // Define the WebSocket server on port 8080
     // let addr = env::args().nth(1).unwrap_or_else(|| "192.168.1.4:8080".to_string());
     let addr = format!("{:?}:8080",my_local_ip.unwrap());
