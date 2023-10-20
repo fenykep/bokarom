@@ -27,8 +27,17 @@ async fn main() -> Result<(), Error> {
 
     let http_server = warp::serve(html);
 
+    // Current time in UTC
+    let now_utc = Utc::now();
+    // Current date in UTC
+    let today_utc = now_utc.date_naive();
+    let weekno = today_utc.iso_week().week();
+    println!("Date now: {}", today_utc);
+    println!("Week number: {}", weekno);
 
-   let file_path = "db/r_01_42.wek";
+ //  let file_path ="db/r_01_42.wek"; 
+   let file_path = format!("db/r_01_{}.wek",weekno.to_string());
+//   let file_path = String::from("db/r_01_{}.wek",weekno);
 
    // Read the content from the file into a string
    // let mut file = File::open(file_path)?;
@@ -63,12 +72,6 @@ async fn main() -> Result<(), Error> {
         println!("Error getting local IP: {:?}", my_local_ip);
     }
 
-    // Current time in UTC
-    let now_utc = Utc::now();
-    // Current date in UTC
-    let today_utc = now_utc.date_naive();
-    println!("Date now: {}", today_utc);
-    println!("Week number: {}", today_utc.iso_week().week());
 
 
     println!("we started up, gotta load the saved stuff now");
