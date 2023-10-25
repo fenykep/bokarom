@@ -3,3 +3,15 @@ on my own page, need to be able to reserve every Tuesday 11:30-14:30 between Sep
 full floorplan, minimap widget for roomselection, coffee-radius, printer
 
 type[r/p](room/person)_hexID[00-ff]_weekno[1-53].wek
+
+
+notes
+
+delegate booking
+more refined filtering, also HO oder hier
+konfi 15mins, flexbüros halbestag, ganztag 
+avabrooms, not just in roomplan view
+rechtmanagement (by category of room or sth)
+white/blacklist rooms
+lieblingsplatz(e)
+pro sitzplatz

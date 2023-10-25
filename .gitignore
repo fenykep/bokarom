@@ -2,3 +2,4 @@ pygen/*.txt
 .DS_Store
 Cargo.lock
 target/
+node_modules/
