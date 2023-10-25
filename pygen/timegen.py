@@ -1,3 +1,4 @@
+# This probably should be translated to pug
 from datetime import datetime, timedelta
 
 # Define the starting time
@@ -35,4 +36,3 @@ for time in time_instances:
     #print(str(counter).zfill(3))
     # also decrease the counter if higher resolution
     counter+=4
-

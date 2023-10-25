@@ -4,8 +4,7 @@ full floorplan, minimap widget for roomselection, coffee-radius, printer
 
 type[r/p](room/person)_hexID[00-ff]_weekno[1-53].wek
 
-
-notes
+Either Auth0 or MSAL (microsoft sso)
 
 delegate booking
 more refined filtering, also HO oder hier
@@ -15,3 +14,16 @@ rechtmanagement (by category of room or sth)
 white/blacklist rooms
 lieblingsplatz(e)
 pro sitzplatz
+
+alias should be globally selectable (so if I book multiple weeks and rooms
+I dont have to keep selecting the person Im booking for)
+
+at selection (especially for personWeek mode or prolly exclusively)
+there should be either a selector as roomWeek aliases and if thats set then good
+but if thats not set then the program should just prompt after saving a selection
+(so it sets those quarterhours as reserved in the meantime) with an autofilly 
+textinput to chose what room to book (that autofilly thing has to be interfaced with
+favorites and it should also have an endpoint at the DB so it can quickly querry for open slots)
+
+
+!!!!! -- Óraátállítás -- !!!!!
