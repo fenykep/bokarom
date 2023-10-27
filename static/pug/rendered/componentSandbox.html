@@ -60,6 +60,9 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3C8251;
 
 }
 
@@ -146,6 +149,9 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3C8251;
 
 }
 
@@ -232,6 +238,9 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3C8251;
 
 }
 
@@ -290,8 +299,13 @@ main {
 	border-right: var(--DoubleBorder) solid var(--Black);
 }
 
+#weekNoSelector div{
+	color: white;
+	background-color: var(--Info);
+}
+
 #weekNoSelector button{
-	background: none;
+	background-color: var(--OffWhite);
 	text-decoration: none;
 	border: none;
 	border: solid var(--FullBorder) var(--Black);
@@ -310,4 +324,61 @@ main {
 
 #weekNoSelector .nextWeekBtn{
 	border-right: 0;
-}</style><div id="weekNoSelector"><button class="prevWeekBtn"><</button><div>Week 42</div><button class="nextWeekBtn">></button></div></main></body>
+}</style><div id="weekNoSelector"><button class="prevWeekBtn"><</button><div>Week 42</div><button class="nextWeekBtn">></button></div><style>:root {
+    --Black: #4E4E4D;
+    --Primary: #68D18E;
+    --Accent: #FFFD61;
+    --Info: #454FE7;
+    --OffWhite: #F9F8F6;
+
+    --FullBorder: 4px;
+    --HalfBorder: calc(var(--FullBorder) / 2);
+    --DoubleBorder: calc(var(--FullBorder) * 2);
+
+    --CardWidth: 90vw;
+}
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#searchBar{
+    width: var(--CardWidth);
+    border: solid var(--DoubleBorder) var(--Black);
+    padding: 0;
+    color: var(--Black);
+    background-color: var(--OffWhite);
+
+    font-family: "Avenir-Roman", sans-serif;
+    font-size: calc(var(--CardWidth) / 15);
+
+    outline: none;
+    transition: all .3s;
+}
+
+#searchBar::selection {
+  color: #fff;
+  background: var(--Primary);
+}
+
+#searchBar:focus {
+  border-color: var(--Primary);
+}
+/*
+#searchBar::after {
+  content: "X";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; 
+  height: 50px;
+  background-image: url('magnifier.svg');
+  background-size: cover;
+}*/
+
+#searchBar::before {
+  content: "X";
+}</style><input id="searchBar" type="text"></main></body>

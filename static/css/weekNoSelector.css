@@ -32,8 +32,13 @@
 	border-right: var(--DoubleBorder) solid var(--Black);
 }
 
+#weekNoSelector div{
+	color: white;
+	background-color: var(--Info);
+}
+
 #weekNoSelector button{
-	background: none;
+	background-color: var(--OffWhite);
 	text-decoration: none;
 	border: none;
 	border: solid var(--FullBorder) var(--Black);

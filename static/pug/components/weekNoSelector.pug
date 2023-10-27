@@ -5,3 +5,8 @@ mixin weekNoSelector(weekNo=42)
 		button.prevWeekBtn <
 		div= "Week " + weekNo
 		button.nextWeekBtn >
+
+mixin searchBar
+	style
+		include ../../css/searchBar.css
+	input#searchBar(type="text")
