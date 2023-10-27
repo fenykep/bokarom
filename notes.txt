@@ -4,6 +4,11 @@ full floorplan, minimap widget for roomselection, coffee-radius, printer
 
 type[r/p](room/person)_hexID[00-ff]_weekno[1-53].wek
 
+//we need reserved codes for:
+  - ferien (room, pers)
+  - urlaub (pers)
+  - Home Office (oder default?)
+
 Either Auth0 or MSAL (microsoft sso)
 
 delegate booking

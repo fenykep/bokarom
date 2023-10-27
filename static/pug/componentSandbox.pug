@@ -1,7 +1,14 @@
 doctype html
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='style.css')
-    title Login Page
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='style.css')
+  title Login Page
+body
   main
+    include components/cardModal
+    include components/weekNoSelector
+    +cardModal("Dr. Anne-Sophie Landwers",1456)
+    +cardModal("Bob Ros","Home Office")
+    +cardModal("Iris Schult","Urlaub")
+    +weekNoSelector()

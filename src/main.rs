@@ -4,8 +4,6 @@ use std::io;
 use std::io::{Read, Write};
 use std::sync::Arc;
 use warp::Filter;
-// use std::sync::{Arc, Mutex};
-// use std::sync::Arc;
 use chrono::{Datelike, NaiveDate, NaiveDateTime, TimeZone, Utc, Weekday};
 use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
 use local_ip_address::local_ip;
@@ -96,7 +94,6 @@ async fn main() -> Result<(), Error> {
 
         //let in_mem_hex_string_clone = in_mem_hex_string.clone(); // Clone the Arc
         tokio::spawn(handle_connection(stream, tx, in_mem_hex_string_clone));
-        // tokio::spawn(handle_connection(stream, tx, leaked_hex_string));
     }
 
     Ok(())
@@ -106,7 +103,6 @@ async fn handle_connection(
     stream: TcpStream,
     tx: tokio::sync::broadcast::Sender<Message>,
     in_mem_hex_string: Arc<Mutex<String>>,
-    // leaked_db: &'static String,
 ) {
     // let addr = stream.peer_addr().expect("connected streams should have a peer address");
     // info!("Peer address: {}", addr);
@@ -146,13 +142,6 @@ async fn handle_connection(
             return; // Exit the task if sending the welcome message fails
         }
 
-        // // old version that works but without the inMemVariable
-        // while let Some(msg) = rx.recv().await.ok() {
-        //     if ws_sink.send(msg).await.is_err() {
-        //         break;
-        //     }
-        // }
-
         // this is the new one that tries to pass down the pointer, lets see if it works
         while let Some(msg) = rx.recv().await.ok() {
             // Update the in-memory hex string with the received message
@@ -171,7 +160,6 @@ async fn handle_connection(
         //     if let Err(_) = ws_sink_arc.lock().unwrap().send(msg.clone()).await {
         //         break;
         //     }
-        // }
     });
 
     // Forward messages from the client to the broadcast channel
