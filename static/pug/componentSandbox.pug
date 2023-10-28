@@ -11,13 +11,14 @@ body
     include components/roomImage
     include components/weekTable
     include components/personsGrid
-    +cardModal("Dr. Anne-Sophie Landwers",1456)
-    +cardModal("Bob Ros","Home Office")
-    +cardModal("Iris Schult","Urlaub")
-    +weekNoSelector(false)
+    +cardModal("Dr. Anne-Sophie Landwers",1456,false)
+    +cardModal("Bob Ros","Home Office",true)
+    +weekNoSelector(33,true)
+    +cardModal("Iris Schult","Urlaub",false)
+    +weekNoSelector(17,false)
     +searchBar()
     +roomImage()
     +weekTable(false)
-    +weekTable()
+    +weekTable(true)
     +personsGrid(10)
     

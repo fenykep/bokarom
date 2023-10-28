@@ -47,6 +47,8 @@ main {
 
     font-family: "Avenir-Roman", sans-serif;
     color: var(--Black);
+
+    transition: all 0.5s;
 }
 
 .fullSize#cardModal {

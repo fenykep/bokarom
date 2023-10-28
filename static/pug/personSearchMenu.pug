@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title Room 1551
+		link(rel="stylesheet" href="../../css/style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body
+		include components/personsGrid
+		include components/cardModal
+		include components/weekNoSelector
+
+		+cardModal("Dr. Richard Engels",1542,true)
+		+searchBar(true)
+		+personsGrid(6)

@@ -41,18 +41,9 @@
 #searchBar:focus {
   border-color: var(--Primary);
 }
-/*
-#searchBar::after {
-  content: "X";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px; 
-  height: 50px;
-  background-image: url('magnifier.svg');
-  background-size: cover;
-}*/
 
-#searchBar::before {
-  content: "X";
+.fullSize#searchBar{
+  margin: var(--DoubleBorder);
+  width: calc(100% - calc(var(--DoubleBorder) * 2));
+  box-sizing: border-box;
 }

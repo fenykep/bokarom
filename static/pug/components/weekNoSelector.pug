@@ -7,7 +7,7 @@ mixin weekNoSelector(weekNo=42, fullSize=true)
 		button.nextWeekBtn(onclick="weekSwitcher(true)") >
 	script(src='../../js/weekSwitcher.js')
 
-mixin searchBar
+mixin searchBar(fullSize=true)
 	style
 		include ../../css/searchBar.css
-	input#searchBar(type="text")
+	input(class={ fullSize: fullSize === true })#searchBar(type="text")

@@ -29,11 +29,14 @@
 	font-size: calc(var(--CardWidth) / 15);
 	border-left: var(--DoubleBorder) solid var(--Black);
 	border-right: var(--DoubleBorder) solid var(--Black);
+	background-color: var(--OffWhite);
 }
 
 .fullSize#weekNoSelector {
 	margin: var(--DoubleBorder);
-	width: unset;
+/*	width: unset;*/
+	width: calc(100% - calc(var(--DoubleBorder) * 2));
+	box-sizing: border-box;
 }
 
 #weekNoSelector div {

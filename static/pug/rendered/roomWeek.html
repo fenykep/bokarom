@@ -28,6 +28,7 @@
 	border: 0;
 	margin-bottom: var(--DoubleBorder);
 	color: var(--Black);
+	font-family: "Avenir-Roman", sans-serif;
 }
 
 #roomImage img{
@@ -60,7 +61,7 @@
     font-size: calc(var(--CardWidth) / 20);
     align-self: end;
 
-	font-family: "Avenir-Roman", sans-serif;
+	
 	text-decoration: underline;
 /*	color: var(--Black);*/
 
@@ -108,11 +109,14 @@
 	font-size: calc(var(--CardWidth) / 15);
 	border-left: var(--DoubleBorder) solid var(--Black);
 	border-right: var(--DoubleBorder) solid var(--Black);
+	background-color: var(--OffWhite);
 }
 
 .fullSize#weekNoSelector {
 	margin: var(--DoubleBorder);
-	width: unset;
+/*	width: unset;*/
+	width: calc(100% - calc(var(--DoubleBorder) * 2));
+	box-sizing: border-box;
 }
 
 #weekNoSelector div {

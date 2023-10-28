@@ -47,6 +47,13 @@ main {
 
     font-family: "Avenir-Roman", sans-serif;
     color: var(--Black);
+
+    transition: all 0.5s;
+}
+
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
 }
 
 #cardModal img {
@@ -135,6 +142,13 @@ main {
 
     font-family: "Avenir-Roman", sans-serif;
     color: var(--Black);
+
+    transition: all 0.5s;
+}
+
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
 }
 
 #cardModal img {
@@ -174,7 +188,83 @@ main {
 
     font-size: calc(var(--CardWidth) / 10);
     font-weight: normal;
-}</style><div id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Bob Ros</h1><h2>Home Office</h2></div><style>:root {
+}</style><div class="fullSize" id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Bob Ros</h1><h2>Home Office</h2></div><style>:root {
+	--Black: #4e4e4d;
+	--Primary: #68d18e;
+	--Accent: #fffd61;
+	--Info: #454fe7;
+	--OffWhite: #f9f8f6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: "Avenir-Roman";
+	src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+#weekNoSelector {
+	display: flex;
+	flex-direction: row;
+	font-family: "Avenir-Roman", sans-serif;
+	font-size: vw;
+	width: var(--CardWidth);
+	justify-content: space-between;
+	font-size: calc(var(--CardWidth) / 15);
+	border-left: var(--DoubleBorder) solid var(--Black);
+	border-right: var(--DoubleBorder) solid var(--Black);
+	background-color: var(--OffWhite);
+}
+
+.fullSize#weekNoSelector {
+	margin: var(--DoubleBorder);
+/*	width: unset;*/
+	width: calc(100% - calc(var(--DoubleBorder) * 2));
+	box-sizing: border-box;
+}
+
+#weekNoSelector div {
+	color: var(--Black);
+	/*	background-color: var(--Info);*/
+}
+
+#weekNoSelector button {
+	background-color: var(--OffWhite);
+	text-decoration: none;
+	border: none;
+	border: solid var(--FullBorder) var(--Black);
+	cursor: pointer;
+	aspect-ratio: 1;
+	transition: all 0.3s;
+
+	font-family: "Avenir-Roman", sans-serif;
+	font-size: calc(var(--CardWidth) / 15);
+
+	line-height: 1em;
+	font-weight: bold;
+	color: var(--Black);
+}
+
+#weekNoSelector button:hover {
+	background-color: var(--Primary);
+	color: white;
+
+	/*	border-color: white;*/
+}
+
+#weekNoSelector .prevWeekBtn {
+	border-left: 0;
+}
+
+#weekNoSelector .nextWeekBtn {
+	border-right: 0;
+}</style><div class="fullSize" id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week 33</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
     --Black: #4e4e4d;
     --Primary: #68d18e;
     --Accent: #fffd61;
@@ -223,6 +313,13 @@ main {
 
     font-family: "Avenir-Roman", sans-serif;
     color: var(--Black);
+
+    transition: all 0.5s;
+}
+
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
 }
 
 #cardModal img {
@@ -293,11 +390,14 @@ main {
 	font-size: calc(var(--CardWidth) / 15);
 	border-left: var(--DoubleBorder) solid var(--Black);
 	border-right: var(--DoubleBorder) solid var(--Black);
+	background-color: var(--OffWhite);
 }
 
 .fullSize#weekNoSelector {
 	margin: var(--DoubleBorder);
-	width: unset;
+/*	width: unset;*/
+	width: calc(100% - calc(var(--DoubleBorder) * 2));
+	box-sizing: border-box;
 }
 
 #weekNoSelector div {
@@ -335,7 +435,7 @@ main {
 
 #weekNoSelector .nextWeekBtn {
 	border-right: 0;
-}</style><div class="fullSize" id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week false</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
+}</style><div id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week 17</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
   --Black: #4e4e4d;
   --Primary: #68d18e;
   --Accent: #fffd61;
@@ -378,21 +478,12 @@ main {
 #searchBar:focus {
   border-color: var(--Primary);
 }
-/*
-#searchBar::after {
-  content: "X";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px; 
-  height: 50px;
-  background-image: url('magnifier.svg');
-  background-size: cover;
-}*/
 
-#searchBar::before {
-  content: "X";
-}</style><input id="searchBar" type="text"><style>:root {
+.fullSize#searchBar{
+  margin: var(--DoubleBorder);
+  width: calc(100% - calc(var(--DoubleBorder) * 2));
+  box-sizing: border-box;
+}</style><input class="fullSize" id="searchBar" type="text"><style>:root {
 	--Black: #4E4E4D;
 	--Primary: #68D18E;
 	--Accent: #FFFD61;

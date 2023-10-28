@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Room 1551</title><link rel="stylesheet" href="../../css/style.css"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><style>:root {
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
+
+    --FullBorder: 4px;
+    --HalfBorder: calc(var(--FullBorder) / 2);
+    --DoubleBorder: calc(var(--FullBorder) * 2);
+
+    --CardWidth: 90vw;
+}
+
+@font-face {
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--DoubleBorder);
+}
+
+#cardModal {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "Image Name"
+        "Image Room";
+
+    border: var(--DoubleBorder) solid var(--Black);
+    background-color: var(--OffWhite);
+    /*    border-radius: 10px;*/
+
+    width: var(--CardWidth);
+    aspect-ratio: 3;
+
+    font-family: "Avenir-Roman", sans-serif;
+    color: var(--Black);
+
+    transition: all 0.5s;
+}
+
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
+}
+
+#cardModal img {
+    grid-area: Image;
+    aspect-ratio: 1;
+    width: calc(100% - 20px);
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: var(--DoubleBorder) solid var(--Primary);
+
+    box-sizing: border-box;
+    margin: 10px;
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
+}
+
+#cardModal h1 {
+    grid-area: Name;
+    margin: 0;
+
+    align-self: center;
+
+    font-weight: normal;
+    font-size: calc(var(--CardWidth) / 20);
+    align-self: end;
+
+    text-decoration: underline 1px solid var(--Black);
+
+    /*    border-bottom: 4px solid;*/
+}
+#cardModal h2 {
+    grid-area: Room;
+    margin: 0;
+    align-self: baseline;
+
+    font-size: calc(var(--CardWidth) / 10);
+    font-weight: normal;
+}</style><div class="fullSize" id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Dr. Richard Engels</h1><h2>Raum 1542</h2></div><style>:root {
+  --Black: #4e4e4d;
+  --Primary: #68d18e;
+  --Accent: #fffd61;
+  --Info: #454fe7;
+  --OffWhite: #f9f8f6;
+
+  --FullBorder: 4px;
+  --HalfBorder: calc(var(--FullBorder) / 2);
+  --DoubleBorder: calc(var(--FullBorder) * 2);
+
+  --CardWidth: 90vw;
+}
+
+@font-face {
+  font-family: "Avenir-Roman";
+  src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#searchBar {
+  width: var(--CardWidth);
+  border: solid var(--DoubleBorder) var(--Black);
+  padding: 0;
+  color: var(--Black);
+  background-color: var(--OffWhite);
+
+  font-family: "Avenir-Roman", sans-serif;
+  font-size: calc(var(--CardWidth) / 15);
+
+  outline: none;
+  transition: all 0.3s;
+}
+
+#searchBar::selection {
+  color: #fff;
+  background: var(--Primary);
+}
+
+#searchBar:focus {
+  border-color: var(--Primary);
+}
+
+.fullSize#searchBar{
+  margin: var(--DoubleBorder);
+  width: calc(100% - calc(var(--DoubleBorder) * 2));
+  box-sizing: border-box;
+}</style><input class="fullSize" id="searchBar" type="text"><style>:root {
+	--Black: #4e4e4d;
+	--Primary: #68d18e;
+	--Accent: #fffd61;
+	--Info: #454fe7;
+	--OffWhite: #f9f8f6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: "Avenir-Roman";
+	src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+#personsGrid {
+	width: 100vw;
+	height: 100%;
+
+	background-color: var(--OffWhite);
+	display: flex;
+	flex-flow: row-reverse wrap-reverse;
+	justify-content: space-evenly;
+	gap: 9vw;
+
+	padding: var(--DoubleBorder);
+	padding: 9vw;
+	/*	width: 100%;*/
+	box-sizing: border-box;
+}
+
+.personBubble {
+	width: 21vw;
+	width: 100%;
+	flex: 1 1 21vw;
+}
+
+.personBubble img {
+	aspect-ratio: 1;
+	width: 100%;
+
+	object-fit: cover;
+	border-radius: 50%;
+	border: var(--DoubleBorder) solid var(--Primary);
+
+	box-sizing: border-box;
+	filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+	/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+	border-color: #3c8251;
+}</style><div id="personsGrid"><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div></div></body></html>
