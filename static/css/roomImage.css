@@ -23,21 +23,36 @@
 
 #roomImage{
 	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+	width: 100%;
 /*	transform: translateX(-5px);*/
 	border: 0;
+	margin-bottom: var(--DoubleBorder);
+	color: var(--Black);
+	font-family: "Avenir-Roman", sans-serif;
 }
 
 #roomImage img{
 	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+	width: 100%;
+	height: 40vh;
+/*	on browser it could be a bit bigger though*/
+	height: 52vh;
+	object-fit: cover;
+	object-position: bottom;
 	border: 0;
 }
 
 #roomImage .roomFeaturesBox{
 	border: var(--DoubleBorder) solid var(--Black);
+	flex-flow: row wrap;
+	display: flex;
+	padding: var(--DoubleBorder);
+	gap: var(--DoubleBorder); 9vw;
+/*	color: var(--Black);*/
 }
 
 #roomImage h1{
-    
+    width: 100%;
     margin: 0;
 
     align-self: center;
@@ -46,8 +61,21 @@
     font-size: calc(var(--CardWidth) / 20);
     align-self: end;
 
-	font-family: "Avenir-Roman", sans-serif;
-	color: var(--Black);
+	
+	text-decoration: underline;
+/*	color: var(--Black);*/
 
 /*    border-bottom: 4px solid;*/
+}
+
+#roomImage .roomFeaturesBox p{
+/*	flex: 1 1 21vw;*/
+	margin: 0;
+	flex-grow: 1;
+/*	color: var(--Black);*/
+}
+
+#roomImage .roomFeaturesBox p::before{
+	content: "• ";
+	color: var(--Primary);
 }

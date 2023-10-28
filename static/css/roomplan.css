@@ -1,23 +1,21 @@
-main{
-	
+main {
 	background-size: cover;
 	height: 800px;
-	
 }
 
-#upFloor{
+#upFloor {
 	aspect-ratio: 1368 / 498;
 	background-image: url("alsoOG.png");
 }
 
-.room{
+.room {
 	background-color: rgba(150, 50, 50, 0.7);
 	width: 40px;
 	height: 40px;
 	position: absolute;
 }
 
-#u1{
+#u1 {
 	top: 10px;
 	left: 1270px;
 	width: 180px;
@@ -25,24 +23,24 @@ main{
 }
 
 #u2 {
-    top: 10px;
-    left: 1568px;
-    width: 120px;
-    height: 217px;
+	top: 10px;
+	left: 1568px;
+	width: 120px;
+	height: 217px;
 }
 
 #u3 {
-    top: 10px;
-    left: 1688px;
-    width: 116px;
-    height: 217px;
+	top: 10px;
+	left: 1688px;
+	width: 116px;
+	height: 217px;
 }
 
 #u4 {
-    top: 10px;
-    left: 1805px;
-    width: 108px;
-    height: 217px;
+	top: 10px;
+	left: 1805px;
+	width: 108px;
+	height: 217px;
 }
 
 #u5 {
@@ -88,36 +86,36 @@ main{
 }
 
 #u11 {
-    top: 590px;
-    left: ;
-    width: ;
-    height: 217px;
+	top: 590px;
+	left:;
+	width:;
+	height: 217px;
 }
 
 #u12 {
-    top: 590px;
-    left: ;
-    width: ;
-    height: 217px;
+	top: 590px;
+	left:;
+	width:;
+	height: 217px;
 }
 
 #u13 {
-    top: 590px;
-    left: ;
-    width: ;
-    height: 217px;
+	top: 590px;
+	left:;
+	width:;
+	height: 217px;
 }
 
 #u14 {
-    top: 590px;
-    left: ;
-    width: ;
-    height: 217px;
+	top: 590px;
+	left:;
+	width:;
+	height: 217px;
 }
 
 #u15 {
-    top: 590px;
-    left: ;
-    width: ;
-    height: 217px;
+	top: 590px;
+	left:;
+	width:;
+	height: 217px;
 }

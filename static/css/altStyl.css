@@ -1,13 +1,13 @@
 :root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #F9F8F6;
-    --Info: #454FE7;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #f9f8f6;
+    --Info: #454fe7;
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('fonts/Avenir-Roman.ttf') format('truetype');
+    font-family: "Avenir-Roman";
+    src: url("fonts/Avenir-Roman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -29,7 +29,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 0px solid #ccc;
     padding: 10px;
     text-align: center;
@@ -37,11 +38,11 @@ th, td {
     user-select: none;
 }
 
-table tr{
+table tr {
     display: none;
 }
 
-table tr:nth-child(4n+1){
+table tr:nth-child(4n + 1) {
     display: block;
 }
 
@@ -61,15 +62,15 @@ tbody {
     overflow-y: auto;
 }
 
-.occupied{
+.occupied {
     background-color: lightseagreen;
     cursor: pointer;
 }
 
-.Sop{
+.Sop {
     border-bottom: dotted 5px lightcyan;
 }
-.Nop{
+.Nop {
     border-top: solid 3px lightgreen;
 }
 
@@ -79,7 +80,7 @@ tbody {
     color: black; /* Adjust text color as needed */
 }
 
-.floatbtn{
+.floatbtn {
     position: fixed;
     width: 4vw;
     height: 4vw;
@@ -87,23 +88,23 @@ tbody {
     box-shadow: 5px 5px 5px gray;
 }
 
-#delbtn{
+#delbtn {
     left: 10vw;
     bottom: 10vw;
     background-color: rgb(255, 87, 51);
 }
 
-#resbtn{
+#resbtn {
     right: 10vw;
     bottom: 10vw;
     background-color: rgb(65, 255, 51);
 }
 
-#delbtn svg path{
+#delbtn svg path {
     transform-origin: bottom left;
     transition: transform 0.4s ease;
 }
 
-.opencan{
+.opencan {
     transform: rotate(18deg) translateY(-16%) translateX(5%);
 }

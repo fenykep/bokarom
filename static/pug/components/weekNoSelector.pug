@@ -1,10 +1,11 @@
-mixin weekNoSelector(weekNo=42)
+mixin weekNoSelector(weekNo=42, fullSize=true)
 	style
 		include ../../css/weekNoSelector.css
-	#weekNoSelector
-		button.prevWeekBtn <
+	div(class={ fullSize: fullSize === true })#weekNoSelector
+		button.prevWeekBtn(onclick="weekSwitcher(false)") <
 		div= "Week " + weekNo
-		button.nextWeekBtn >
+		button.nextWeekBtn(onclick="weekSwitcher(true)") >
+	script(src='../../js/weekSwitcher.js')
 
 mixin searchBar
 	style

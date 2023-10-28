@@ -1,7 +1,7 @@
-mixin cardModal(name="Buchmüller John", roomNo=1456)
+mixin cardModal(name="Buchmüller John", roomNo=1456,fullSize=true)
     style
         include ../../css/cardModal.css
-    #cardModal
+    div(class={ fullSize: fullSize === true })#cardModal
         img(src='https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg')
         h1= name
         if typeof roomNo === 'number'

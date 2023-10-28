@@ -1,9 +1,9 @@
 :root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
     --FullBorder: 4px;
     --HalfBorder: calc(var(--FullBorder) / 2);
@@ -13,13 +13,13 @@
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -30,17 +30,17 @@ main {
     gap: var(--DoubleBorder);
 }
 
-#cardModal{
+#cardModal {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "Image Name"
-        "Image Room"; 
+        "Image Room";
 
     border: var(--DoubleBorder) solid var(--Black);
     background-color: var(--OffWhite);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
 
     width: var(--CardWidth);
     aspect-ratio: 3;
@@ -49,7 +49,12 @@ main {
     color: var(--Black);
 }
 
-#cardModal img{
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
+}
+
+#cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
     width: calc(100% - 20px);
@@ -61,12 +66,11 @@ main {
     box-sizing: border-box;
     margin: 10px;
     filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
-/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
-    border-color: #3C8251;
-
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
 }
 
-#cardModal h1{
+#cardModal h1 {
     grid-area: Name;
     margin: 0;
 
@@ -78,9 +82,9 @@ main {
 
     text-decoration: underline 1px solid var(--Black);
 
-/*    border-bottom: 4px solid;*/
+    /*    border-bottom: 4px solid;*/
 }
-#cardModal h2{
+#cardModal h2 {
     grid-area: Room;
     margin: 0;
     align-self: baseline;

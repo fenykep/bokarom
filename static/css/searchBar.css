@@ -1,36 +1,36 @@
 :root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+  --Black: #4e4e4d;
+  --Primary: #68d18e;
+  --Accent: #fffd61;
+  --Info: #454fe7;
+  --OffWhite: #f9f8f6;
 
-    --FullBorder: 4px;
-    --HalfBorder: calc(var(--FullBorder) / 2);
-    --DoubleBorder: calc(var(--FullBorder) * 2);
+  --FullBorder: 4px;
+  --HalfBorder: calc(var(--FullBorder) / 2);
+  --DoubleBorder: calc(var(--FullBorder) * 2);
 
-    --CardWidth: 90vw;
+  --CardWidth: 90vw;
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Avenir-Roman";
+  src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-#searchBar{
-    width: var(--CardWidth);
-    border: solid var(--DoubleBorder) var(--Black);
-    padding: 0;
-    color: var(--Black);
-    background-color: var(--OffWhite);
+#searchBar {
+  width: var(--CardWidth);
+  border: solid var(--DoubleBorder) var(--Black);
+  padding: 0;
+  color: var(--Black);
+  background-color: var(--OffWhite);
 
-    font-family: "Avenir-Roman", sans-serif;
-    font-size: calc(var(--CardWidth) / 15);
+  font-family: "Avenir-Roman", sans-serif;
+  font-size: calc(var(--CardWidth) / 15);
 
-    outline: none;
-    transition: all .3s;
+  outline: none;
+  transition: all 0.3s;
 }
 
 #searchBar::selection {

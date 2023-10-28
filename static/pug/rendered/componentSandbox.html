@@ -1,9 +1,9 @@
 <!DOCTYPE html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css"><title>Login Page</title></head><body><main><style>:root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
     --FullBorder: 4px;
     --HalfBorder: calc(var(--FullBorder) / 2);
@@ -13,13 +13,13 @@
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -30,17 +30,17 @@ main {
     gap: var(--DoubleBorder);
 }
 
-#cardModal{
+#cardModal {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "Image Name"
-        "Image Room"; 
+        "Image Room";
 
     border: var(--DoubleBorder) solid var(--Black);
     background-color: var(--OffWhite);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
 
     width: var(--CardWidth);
     aspect-ratio: 3;
@@ -49,7 +49,7 @@ main {
     color: var(--Black);
 }
 
-#cardModal img{
+#cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
     width: calc(100% - 20px);
@@ -61,12 +61,11 @@ main {
     box-sizing: border-box;
     margin: 10px;
     filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
-/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
-    border-color: #3C8251;
-
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
 }
 
-#cardModal h1{
+#cardModal h1 {
     grid-area: Name;
     margin: 0;
 
@@ -78,9 +77,9 @@ main {
 
     text-decoration: underline 1px solid var(--Black);
 
-/*    border-bottom: 4px solid;*/
+    /*    border-bottom: 4px solid;*/
 }
-#cardModal h2{
+#cardModal h2 {
     grid-area: Room;
     margin: 0;
     align-self: baseline;
@@ -88,11 +87,11 @@ main {
     font-size: calc(var(--CardWidth) / 10);
     font-weight: normal;
 }</style><div id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Dr. Anne-Sophie Landwers</h1><h2>Raum 1456</h2></div><style>:root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
     --FullBorder: 4px;
     --HalfBorder: calc(var(--FullBorder) / 2);
@@ -102,13 +101,13 @@ main {
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -119,17 +118,17 @@ main {
     gap: var(--DoubleBorder);
 }
 
-#cardModal{
+#cardModal {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "Image Name"
-        "Image Room"; 
+        "Image Room";
 
     border: var(--DoubleBorder) solid var(--Black);
     background-color: var(--OffWhite);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
 
     width: var(--CardWidth);
     aspect-ratio: 3;
@@ -138,7 +137,7 @@ main {
     color: var(--Black);
 }
 
-#cardModal img{
+#cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
     width: calc(100% - 20px);
@@ -150,12 +149,11 @@ main {
     box-sizing: border-box;
     margin: 10px;
     filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
-/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
-    border-color: #3C8251;
-
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
 }
 
-#cardModal h1{
+#cardModal h1 {
     grid-area: Name;
     margin: 0;
 
@@ -167,9 +165,9 @@ main {
 
     text-decoration: underline 1px solid var(--Black);
 
-/*    border-bottom: 4px solid;*/
+    /*    border-bottom: 4px solid;*/
 }
-#cardModal h2{
+#cardModal h2 {
     grid-area: Room;
     margin: 0;
     align-self: baseline;
@@ -177,11 +175,11 @@ main {
     font-size: calc(var(--CardWidth) / 10);
     font-weight: normal;
 }</style><div id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Bob Ros</h1><h2>Home Office</h2></div><style>:root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
     --FullBorder: 4px;
     --HalfBorder: calc(var(--FullBorder) / 2);
@@ -191,13 +189,13 @@ main {
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -208,17 +206,17 @@ main {
     gap: var(--DoubleBorder);
 }
 
-#cardModal{
+#cardModal {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "Image Name"
-        "Image Room"; 
+        "Image Room";
 
     border: var(--DoubleBorder) solid var(--Black);
     background-color: var(--OffWhite);
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
 
     width: var(--CardWidth);
     aspect-ratio: 3;
@@ -227,7 +225,7 @@ main {
     color: var(--Black);
 }
 
-#cardModal img{
+#cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
     width: calc(100% - 20px);
@@ -239,12 +237,11 @@ main {
     box-sizing: border-box;
     margin: 10px;
     filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
-/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
-    border-color: #3C8251;
-
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
 }
 
-#cardModal h1{
+#cardModal h1 {
     grid-area: Name;
     margin: 0;
 
@@ -256,9 +253,9 @@ main {
 
     text-decoration: underline 1px solid var(--Black);
 
-/*    border-bottom: 4px solid;*/
+    /*    border-bottom: 4px solid;*/
 }
-#cardModal h2{
+#cardModal h2 {
     grid-area: Room;
     margin: 0;
     align-self: baseline;
@@ -266,28 +263,27 @@ main {
     font-size: calc(var(--CardWidth) / 10);
     font-weight: normal;
 }</style><div id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Iris Schult</h1><h2>Urlaub</h2></div><style>:root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+	--Black: #4e4e4d;
+	--Primary: #68d18e;
+	--Accent: #fffd61;
+	--Info: #454fe7;
+	--OffWhite: #f9f8f6;
 
-    --FullBorder: 4px;
-    --HalfBorder: calc(var(--FullBorder) / 2);
-    --DoubleBorder: calc(var(--FullBorder) * 2);
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
 
-    --CardWidth: 90vw;
+	--CardWidth: 90vw;
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Avenir-Roman";
+	src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
-
-#weekNoSelector{
+#weekNoSelector {
 	display: flex;
 	flex-direction: row;
 	font-family: "Avenir-Roman", sans-serif;
@@ -299,19 +295,24 @@ main {
 	border-right: var(--DoubleBorder) solid var(--Black);
 }
 
-#weekNoSelector div{
-	color: var(--Black);
-/*	background-color: var(--Info);*/
+.fullSize#weekNoSelector {
+	margin: var(--DoubleBorder);
+	width: unset;
 }
 
-#weekNoSelector button{
+#weekNoSelector div {
+	color: var(--Black);
+	/*	background-color: var(--Info);*/
+}
+
+#weekNoSelector button {
 	background-color: var(--OffWhite);
 	text-decoration: none;
 	border: none;
 	border: solid var(--FullBorder) var(--Black);
 	cursor: pointer;
 	aspect-ratio: 1;
-	transition: all .3s;
+	transition: all 0.3s;
 
 	font-family: "Avenir-Roman", sans-serif;
 	font-size: calc(var(--CardWidth) / 15);
@@ -321,52 +322,52 @@ main {
 	color: var(--Black);
 }
 
-#weekNoSelector button:hover{
+#weekNoSelector button:hover {
 	background-color: var(--Primary);
 	color: white;
 
-/*	border-color: white;*/
+	/*	border-color: white;*/
 }
 
-#weekNoSelector .prevWeekBtn{
+#weekNoSelector .prevWeekBtn {
 	border-left: 0;
 }
 
-#weekNoSelector .nextWeekBtn{
+#weekNoSelector .nextWeekBtn {
 	border-right: 0;
-}</style><div id="weekNoSelector"><button class="prevWeekBtn"><</button><div>Week 42</div><button class="nextWeekBtn">></button></div><style>:root {
-    --Black: #4E4E4D;
-    --Primary: #68D18E;
-    --Accent: #FFFD61;
-    --Info: #454FE7;
-    --OffWhite: #F9F8F6;
+}</style><div class="fullSize" id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week false</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
+  --Black: #4e4e4d;
+  --Primary: #68d18e;
+  --Accent: #fffd61;
+  --Info: #454fe7;
+  --OffWhite: #f9f8f6;
 
-    --FullBorder: 4px;
-    --HalfBorder: calc(var(--FullBorder) / 2);
-    --DoubleBorder: calc(var(--FullBorder) * 2);
+  --FullBorder: 4px;
+  --HalfBorder: calc(var(--FullBorder) / 2);
+  --DoubleBorder: calc(var(--FullBorder) * 2);
 
-    --CardWidth: 90vw;
+  --CardWidth: 90vw;
 }
 
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Avenir-Roman";
+  src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-#searchBar{
-    width: var(--CardWidth);
-    border: solid var(--DoubleBorder) var(--Black);
-    padding: 0;
-    color: var(--Black);
-    background-color: var(--OffWhite);
+#searchBar {
+  width: var(--CardWidth);
+  border: solid var(--DoubleBorder) var(--Black);
+  padding: 0;
+  color: var(--Black);
+  background-color: var(--OffWhite);
 
-    font-family: "Avenir-Roman", sans-serif;
-    font-size: calc(var(--CardWidth) / 15);
+  font-family: "Avenir-Roman", sans-serif;
+  font-size: calc(var(--CardWidth) / 15);
 
-    outline: none;
-    transition: all .3s;
+  outline: none;
+  transition: all 0.3s;
 }
 
 #searchBar::selection {
@@ -416,21 +417,36 @@ main {
 
 #roomImage{
 	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+	width: 100%;
 /*	transform: translateX(-5px);*/
 	border: 0;
+	margin-bottom: var(--DoubleBorder);
+	color: var(--Black);
+	font-family: "Avenir-Roman", sans-serif;
 }
 
 #roomImage img{
 	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+	width: 100%;
+	height: 40vh;
+/*	on browser it could be a bit bigger though*/
+	height: 52vh;
+	object-fit: cover;
+	object-position: bottom;
 	border: 0;
 }
 
 #roomImage .roomFeaturesBox{
 	border: var(--DoubleBorder) solid var(--Black);
+	flex-flow: row wrap;
+	display: flex;
+	padding: var(--DoubleBorder);
+	gap: var(--DoubleBorder); 9vw;
+/*	color: var(--Black);*/
 }
 
 #roomImage h1{
-    
+    width: 100%;
     margin: 0;
 
     align-self: center;
@@ -439,44 +455,58 @@ main {
     font-size: calc(var(--CardWidth) / 20);
     align-self: end;
 
-	font-family: "Avenir-Roman", sans-serif;
-	color: var(--Black);
+	
+	text-decoration: underline;
+/*	color: var(--Black);*/
 
 /*    border-bottom: 4px solid;*/
-}</style><div id="roomImage"><img src="../../img/room1523.jpeg"><div class="roomFeaturesBox"><h1>Room 1456</h1></div></div><style>:root {
-	--Black: #4E4E4D;
-	--Primary: #68D18E;
-	--Accent: #FFFD61;
-	--Info: #454FE7;
-	--OffWhite: #F9F8F6;
+}
 
-	--FullBorder: 4px;
-	--HalfBorder: calc(var(--FullBorder) / 2);
-	--DoubleBorder: calc(var(--FullBorder) * 2);
+#roomImage .roomFeaturesBox p{
+/*	flex: 1 1 21vw;*/
+	margin: 0;
+	flex-grow: 1;
+/*	color: var(--Black);*/
+}
 
-	--CardWidth: 90vw;
+#roomImage .roomFeaturesBox p::before{
+	content: "• ";
+	color: var(--Primary);
+}</style><div id="roomImage"><img src="../../img/room1523.jpeg"><div class="roomFeaturesBox"><h1>Room 1456</h1><p>Kaffeekoeffizient: 5</p><p>Nordausrichtung</p><p>Whiteboard</p><p>Big Screen</p><p>Couch</p><p>Rothko</p></div></div><style>:root {
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
+
+    --FullBorder: 4px;
+    --HalfBorder: calc(var(--FullBorder) / 2);
+    --DoubleBorder: calc(var(--FullBorder) * 2);
+
+    --CardWidth: 90vw;
 }
 
 @font-face {
-	font-family: 'Avenir-Roman';
-	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 #weekTable {
-/*    font-family: monospace;*/
+    /*    font-family: monospace;*/
     font-family: "Avenir-Roman", sans-serif;
-/*    font-weight: bold;*/
+    /*    font-weight: bold;*/
     font-size: 1.1em;
-/*    for avenir I have to use 1.1 for monospace 1.3*/
-/*    font-size: 1.3em;*/
+    /*    for avenir I have to use 1.1 for monospace 1.3*/
+    /*    font-size: 1.3em;*/
     width: 100%;
     height: calc(100vh - 20px); /* Adjust as needed */
     border-collapse: collapse;
 }
 
-#weekTable th, td {
+#weekTable th,
+td {
     border: 3px solid var(--Black);
     padding: var(--DoubleBorder);
     text-align: center;
@@ -494,7 +524,7 @@ main {
     font-weight: bold;
 }
 
-#weekTable td:first-child{
+#weekTable td:first-child {
     font-family: monospace;
     font-size: 1.3em;
     font-weight: bold;
@@ -506,36 +536,37 @@ main {
     overflow-y: auto;
 }
 
-.smol#weekTable{
-	height: calc(25vh - 5px);
+.smol#weekTable {
+    height: calc(25vh - 5px);
 }
 
-.smol#weekTable th, .smol#weekTable td{
-	width: 100%;
-	width: calc(100vw / 6);
+.smol#weekTable th,
+.smol#weekTable td {
+    width: 100%;
+    width: calc(100vw / 6);
 }
 /*
 .smol#weekTable td{
-	width: 100%;
+    width: 100%;
 }
 */
-.smol#weekTable tr{
+.smol#weekTable tr {
     display: none;
 }
 
-.smol#weekTable tr:nth-child(4n+1){
+.smol#weekTable tr:nth-child(4n + 1) {
     display: block;
 }
 
-#weekTable .occupied{
+#weekTable .occupied {
     background-color: lightseagreen;
     cursor: pointer;
 }
 
-#weekTable .Sop{
+#weekTable .Sop {
     border-bottom: dotted 5px lightcyan;
 }
-#weekTable .Nop{
+#weekTable .Nop {
     border-top: solid 3px lightgreen;
 }
 
@@ -544,39 +575,40 @@ main {
     background-color: lightblue; /* Adjust the background color to your preference */
     color: black; /* Adjust text color as needed */
 }</style><table id="weekTable"><thead><tr><th></th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody><tr><td>08:00</td><td id="dr000">Data</td><td id="dr040">Data</td><td id="dr080">Data</td><td id="dr120">Data</td><td id="dr160">Data</td></tr><tr><td>08:15</td><td id="dr001">Data</td><td id="dr041">Data</td><td id="dr081">Data</td><td id="dr121">Data</td><td id="dr161">Data</td></tr><tr><td>08:30</td><td id="dr002">Data</td><td id="dr042">Data</td><td id="dr082">Data</td><td id="dr122">Data</td><td id="dr162">Data</td></tr><tr><td>08:45</td><td id="dr003">Data</td><td id="dr043">Data</td><td id="dr083">Data</td><td id="dr123">Data</td><td id="dr163">Data</td></tr><tr><td>09:00</td><td id="dr004">Data</td><td id="dr044">Data</td><td id="dr084">Data</td><td id="dr124">Data</td><td id="dr164">Data</td></tr><tr><td>09:15</td><td id="dr005">Data</td><td id="dr045">Data</td><td id="dr085">Data</td><td id="dr125">Data</td><td id="dr165">Data</td></tr><tr><td>09:30</td><td id="dr006">Data</td><td id="dr046">Data</td><td id="dr086">Data</td><td id="dr126">Data</td><td id="dr166">Data</td></tr><tr><td>09:45</td><td id="dr007">Data</td><td id="dr047">Data</td><td id="dr087">Data</td><td id="dr127">Data</td><td id="dr167">Data</td></tr><tr><td>10:00</td><td id="dr008">Data</td><td id="dr048">Data</td><td id="dr088">Data</td><td id="dr128">Data</td><td id="dr168">Data</td></tr><tr><td>10:15</td><td id="dr009">Data</td><td id="dr049">Data</td><td id="dr089">Data</td><td id="dr129">Data</td><td id="dr169">Data</td></tr><tr><td>10:30</td><td id="dr010">Data</td><td id="dr050">Data</td><td id="dr090">Data</td><td id="dr130">Data</td><td id="dr170">Data</td></tr><tr><td>10:45</td><td id="dr011">Data</td><td id="dr051">Data</td><td id="dr091">Data</td><td id="dr131">Data</td><td id="dr171">Data</td></tr><tr><td>11:00</td><td id="dr012">Data</td><td id="dr052">Data</td><td id="dr092">Data</td><td id="dr132">Data</td><td id="dr172">Data</td></tr><tr><td>11:15</td><td id="dr013">Data</td><td id="dr053">Data</td><td id="dr093">Data</td><td id="dr133">Data</td><td id="dr173">Data</td></tr><tr><td>11:30</td><td id="dr014">Data</td><td id="dr054">Data</td><td id="dr094">Data</td><td id="dr134">Data</td><td id="dr174">Data</td></tr><tr><td>11:45</td><td id="dr015">Data</td><td id="dr055">Data</td><td id="dr095">Data</td><td id="dr135">Data</td><td id="dr175">Data</td></tr><tr><td>12:00</td><td id="dr016">Data</td><td id="dr056">Data</td><td id="dr096">Data</td><td id="dr136">Data</td><td id="dr176">Data</td></tr><tr><td>12:15</td><td id="dr017">Data</td><td id="dr057">Data</td><td id="dr097">Data</td><td id="dr137">Data</td><td id="dr177">Data</td></tr><tr><td>12:30</td><td id="dr018">Data</td><td id="dr058">Data</td><td id="dr098">Data</td><td id="dr138">Data</td><td id="dr178">Data</td></tr><tr><td>12:45</td><td id="dr019">Data</td><td id="dr059">Data</td><td id="dr099">Data</td><td id="dr139">Data</td><td id="dr179">Data</td></tr><tr><td>13:00</td><td id="dr020">Data</td><td id="dr060">Data</td><td id="dr100">Data</td><td id="dr140">Data</td><td id="dr180">Data</td></tr><tr><td>13:15</td><td id="dr021">Data</td><td id="dr061">Data</td><td id="dr101">Data</td><td id="dr141">Data</td><td id="dr181">Data</td></tr><tr><td>13:30</td><td id="dr022">Data</td><td id="dr062">Data</td><td id="dr102">Data</td><td id="dr142">Data</td><td id="dr182">Data</td></tr><tr><td>13:45</td><td id="dr023">Data</td><td id="dr063">Data</td><td id="dr103">Data</td><td id="dr143">Data</td><td id="dr183">Data</td></tr><tr><td>14:00</td><td id="dr024">Data</td><td id="dr064">Data</td><td id="dr104">Data</td><td id="dr144">Data</td><td id="dr184">Data</td></tr><tr><td>14:15</td><td id="dr025">Data</td><td id="dr065">Data</td><td id="dr105">Data</td><td id="dr145">Data</td><td id="dr185">Data</td></tr><tr><td>14:30</td><td id="dr026">Data</td><td id="dr066">Data</td><td id="dr106">Data</td><td id="dr146">Data</td><td id="dr186">Data</td></tr><tr><td>14:45</td><td id="dr027">Data</td><td id="dr067">Data</td><td id="dr107">Data</td><td id="dr147">Data</td><td id="dr187">Data</td></tr><tr><td>15:00</td><td id="dr028">Data</td><td id="dr068">Data</td><td id="dr108">Data</td><td id="dr148">Data</td><td id="dr188">Data</td></tr><tr><td>15:15</td><td id="dr029">Data</td><td id="dr069">Data</td><td id="dr109">Data</td><td id="dr149">Data</td><td id="dr189">Data</td></tr><tr><td>15:30</td><td id="dr030">Data</td><td id="dr070">Data</td><td id="dr110">Data</td><td id="dr150">Data</td><td id="dr190">Data</td></tr><tr><td>15:45</td><td id="dr031">Data</td><td id="dr071">Data</td><td id="dr111">Data</td><td id="dr151">Data</td><td id="dr191">Data</td></tr><tr><td>16:00</td><td id="dr032">Data</td><td id="dr072">Data</td><td id="dr112">Data</td><td id="dr152">Data</td><td id="dr192">Data</td></tr><tr><td>16:15</td><td id="dr033">Data</td><td id="dr073">Data</td><td id="dr113">Data</td><td id="dr153">Data</td><td id="dr193">Data</td></tr><tr><td>16:30</td><td id="dr034">Data</td><td id="dr074">Data</td><td id="dr114">Data</td><td id="dr154">Data</td><td id="dr194">Data</td></tr><tr><td>16:45</td><td id="dr035">Data</td><td id="dr075">Data</td><td id="dr115">Data</td><td id="dr155">Data</td><td id="dr195">Data</td></tr><tr><td>17:00</td><td id="dr036">Data</td><td id="dr076">Data</td><td id="dr116">Data</td><td id="dr156">Data</td><td id="dr196">Data</td></tr><tr><td>17:15</td><td id="dr037">Data</td><td id="dr077">Data</td><td id="dr117">Data</td><td id="dr157">Data</td><td id="dr197">Data</td></tr><tr><td>17:30</td><td id="dr038">Data</td><td id="dr078">Data</td><td id="dr118">Data</td><td id="dr158">Data</td><td id="dr198">Data</td></tr><tr><td>17:45</td><td id="dr039">Data</td><td id="dr079">Data</td><td id="dr119">Data</td><td id="dr159">Data</td><td id="dr199">Data</td></tr></tbody></table><style>:root {
-	--Black: #4E4E4D;
-	--Primary: #68D18E;
-	--Accent: #FFFD61;
-	--Info: #454FE7;
-	--OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
-	--FullBorder: 4px;
-	--HalfBorder: calc(var(--FullBorder) / 2);
-	--DoubleBorder: calc(var(--FullBorder) * 2);
+    --FullBorder: 4px;
+    --HalfBorder: calc(var(--FullBorder) / 2);
+    --DoubleBorder: calc(var(--FullBorder) * 2);
 
-	--CardWidth: 90vw;
+    --CardWidth: 90vw;
 }
 
 @font-face {
-	font-family: 'Avenir-Roman';
-	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 #weekTable {
-/*    font-family: monospace;*/
+    /*    font-family: monospace;*/
     font-family: "Avenir-Roman", sans-serif;
-/*    font-weight: bold;*/
+    /*    font-weight: bold;*/
     font-size: 1.1em;
-/*    for avenir I have to use 1.1 for monospace 1.3*/
-/*    font-size: 1.3em;*/
+    /*    for avenir I have to use 1.1 for monospace 1.3*/
+    /*    font-size: 1.3em;*/
     width: 100%;
     height: calc(100vh - 20px); /* Adjust as needed */
     border-collapse: collapse;
 }
 
-#weekTable th, td {
+#weekTable th,
+td {
     border: 3px solid var(--Black);
     padding: var(--DoubleBorder);
     text-align: center;
@@ -594,7 +626,7 @@ main {
     font-weight: bold;
 }
 
-#weekTable td:first-child{
+#weekTable td:first-child {
     font-family: monospace;
     font-size: 1.3em;
     font-weight: bold;
@@ -606,36 +638,37 @@ main {
     overflow-y: auto;
 }
 
-.smol#weekTable{
-	height: calc(25vh - 5px);
+.smol#weekTable {
+    height: calc(25vh - 5px);
 }
 
-.smol#weekTable th, .smol#weekTable td{
-	width: 100%;
-	width: calc(100vw / 6);
+.smol#weekTable th,
+.smol#weekTable td {
+    width: 100%;
+    width: calc(100vw / 6);
 }
 /*
 .smol#weekTable td{
-	width: 100%;
+    width: 100%;
 }
 */
-.smol#weekTable tr{
+.smol#weekTable tr {
     display: none;
 }
 
-.smol#weekTable tr:nth-child(4n+1){
+.smol#weekTable tr:nth-child(4n + 1) {
     display: block;
 }
 
-#weekTable .occupied{
+#weekTable .occupied {
     background-color: lightseagreen;
     cursor: pointer;
 }
 
-#weekTable .Sop{
+#weekTable .Sop {
     border-bottom: dotted 5px lightcyan;
 }
-#weekTable .Nop{
+#weekTable .Nop {
     border-top: solid 3px lightgreen;
 }
 
@@ -644,11 +677,11 @@ main {
     background-color: lightblue; /* Adjust the background color to your preference */
     color: black; /* Adjust text color as needed */
 }</style><table class="smol" id="weekTable"><thead><tr><th></th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody><tr><td>08:00</td><td id="dr040">Data</td><td id="dr080">Data</td><td id="dr120">Data</td><td id="dr160">Data</td><td id="dr200">Data</td></tr><tr><td>08:15</td><td id="dr041">Data</td><td id="dr081">Data</td><td id="dr121">Data</td><td id="dr161">Data</td><td id="dr201">Data</td></tr><tr><td>08:30</td><td id="dr042">Data</td><td id="dr082">Data</td><td id="dr122">Data</td><td id="dr162">Data</td><td id="dr202">Data</td></tr><tr><td>08:45</td><td id="dr043">Data</td><td id="dr083">Data</td><td id="dr123">Data</td><td id="dr163">Data</td><td id="dr203">Data</td></tr><tr><td>09:00</td><td id="dr044">Data</td><td id="dr084">Data</td><td id="dr124">Data</td><td id="dr164">Data</td><td id="dr204">Data</td></tr><tr><td>09:15</td><td id="dr045">Data</td><td id="dr085">Data</td><td id="dr125">Data</td><td id="dr165">Data</td><td id="dr205">Data</td></tr><tr><td>09:30</td><td id="dr046">Data</td><td id="dr086">Data</td><td id="dr126">Data</td><td id="dr166">Data</td><td id="dr206">Data</td></tr><tr><td>09:45</td><td id="dr047">Data</td><td id="dr087">Data</td><td id="dr127">Data</td><td id="dr167">Data</td><td id="dr207">Data</td></tr><tr><td>10:00</td><td id="dr048">Data</td><td id="dr088">Data</td><td id="dr128">Data</td><td id="dr168">Data</td><td id="dr208">Data</td></tr><tr><td>10:15</td><td id="dr049">Data</td><td id="dr089">Data</td><td id="dr129">Data</td><td id="dr169">Data</td><td id="dr209">Data</td></tr><tr><td>10:30</td><td id="dr050">Data</td><td id="dr090">Data</td><td id="dr130">Data</td><td id="dr170">Data</td><td id="dr210">Data</td></tr><tr><td>10:45</td><td id="dr051">Data</td><td id="dr091">Data</td><td id="dr131">Data</td><td id="dr171">Data</td><td id="dr211">Data</td></tr><tr><td>11:00</td><td id="dr052">Data</td><td id="dr092">Data</td><td id="dr132">Data</td><td id="dr172">Data</td><td id="dr212">Data</td></tr><tr><td>11:15</td><td id="dr053">Data</td><td id="dr093">Data</td><td id="dr133">Data</td><td id="dr173">Data</td><td id="dr213">Data</td></tr><tr><td>11:30</td><td id="dr054">Data</td><td id="dr094">Data</td><td id="dr134">Data</td><td id="dr174">Data</td><td id="dr214">Data</td></tr><tr><td>11:45</td><td id="dr055">Data</td><td id="dr095">Data</td><td id="dr135">Data</td><td id="dr175">Data</td><td id="dr215">Data</td></tr><tr><td>12:00</td><td id="dr056">Data</td><td id="dr096">Data</td><td id="dr136">Data</td><td id="dr176">Data</td><td id="dr216">Data</td></tr><tr><td>12:15</td><td id="dr057">Data</td><td id="dr097">Data</td><td id="dr137">Data</td><td id="dr177">Data</td><td id="dr217">Data</td></tr><tr><td>12:30</td><td id="dr058">Data</td><td id="dr098">Data</td><td id="dr138">Data</td><td id="dr178">Data</td><td id="dr218">Data</td></tr><tr><td>12:45</td><td id="dr059">Data</td><td id="dr099">Data</td><td id="dr139">Data</td><td id="dr179">Data</td><td id="dr219">Data</td></tr><tr><td>13:00</td><td id="dr060">Data</td><td id="dr100">Data</td><td id="dr140">Data</td><td id="dr180">Data</td><td id="dr220">Data</td></tr><tr><td>13:15</td><td id="dr061">Data</td><td id="dr101">Data</td><td id="dr141">Data</td><td id="dr181">Data</td><td id="dr221">Data</td></tr><tr><td>13:30</td><td id="dr062">Data</td><td id="dr102">Data</td><td id="dr142">Data</td><td id="dr182">Data</td><td id="dr222">Data</td></tr><tr><td>13:45</td><td id="dr063">Data</td><td id="dr103">Data</td><td id="dr143">Data</td><td id="dr183">Data</td><td id="dr223">Data</td></tr><tr><td>14:00</td><td id="dr064">Data</td><td id="dr104">Data</td><td id="dr144">Data</td><td id="dr184">Data</td><td id="dr224">Data</td></tr><tr><td>14:15</td><td id="dr065">Data</td><td id="dr105">Data</td><td id="dr145">Data</td><td id="dr185">Data</td><td id="dr225">Data</td></tr><tr><td>14:30</td><td id="dr066">Data</td><td id="dr106">Data</td><td id="dr146">Data</td><td id="dr186">Data</td><td id="dr226">Data</td></tr><tr><td>14:45</td><td id="dr067">Data</td><td id="dr107">Data</td><td id="dr147">Data</td><td id="dr187">Data</td><td id="dr227">Data</td></tr><tr><td>15:00</td><td id="dr068">Data</td><td id="dr108">Data</td><td id="dr148">Data</td><td id="dr188">Data</td><td id="dr228">Data</td></tr><tr><td>15:15</td><td id="dr069">Data</td><td id="dr109">Data</td><td id="dr149">Data</td><td id="dr189">Data</td><td id="dr229">Data</td></tr><tr><td>15:30</td><td id="dr070">Data</td><td id="dr110">Data</td><td id="dr150">Data</td><td id="dr190">Data</td><td id="dr230">Data</td></tr><tr><td>15:45</td><td id="dr071">Data</td><td id="dr111">Data</td><td id="dr151">Data</td><td id="dr191">Data</td><td id="dr231">Data</td></tr><tr><td>16:00</td><td id="dr072">Data</td><td id="dr112">Data</td><td id="dr152">Data</td><td id="dr192">Data</td><td id="dr232">Data</td></tr><tr><td>16:15</td><td id="dr073">Data</td><td id="dr113">Data</td><td id="dr153">Data</td><td id="dr193">Data</td><td id="dr233">Data</td></tr><tr><td>16:30</td><td id="dr074">Data</td><td id="dr114">Data</td><td id="dr154">Data</td><td id="dr194">Data</td><td id="dr234">Data</td></tr><tr><td>16:45</td><td id="dr075">Data</td><td id="dr115">Data</td><td id="dr155">Data</td><td id="dr195">Data</td><td id="dr235">Data</td></tr><tr><td>17:00</td><td id="dr076">Data</td><td id="dr116">Data</td><td id="dr156">Data</td><td id="dr196">Data</td><td id="dr236">Data</td></tr><tr><td>17:15</td><td id="dr077">Data</td><td id="dr117">Data</td><td id="dr157">Data</td><td id="dr197">Data</td><td id="dr237">Data</td></tr><tr><td>17:30</td><td id="dr078">Data</td><td id="dr118">Data</td><td id="dr158">Data</td><td id="dr198">Data</td><td id="dr238">Data</td></tr><tr><td>17:45</td><td id="dr079">Data</td><td id="dr119">Data</td><td id="dr159">Data</td><td id="dr199">Data</td><td id="dr239">Data</td></tr></tbody></table><style>:root {
-	--Black: #4E4E4D;
-	--Primary: #68D18E;
-	--Accent: #FFFD61;
-	--Info: #454FE7;
-	--OffWhite: #F9F8F6;
+	--Black: #4e4e4d;
+	--Primary: #68d18e;
+	--Accent: #fffd61;
+	--Info: #454fe7;
+	--OffWhite: #f9f8f6;
 
 	--FullBorder: 4px;
 	--HalfBorder: calc(var(--FullBorder) / 2);
@@ -658,13 +691,13 @@ main {
 }
 
 @font-face {
-	font-family: 'Avenir-Roman';
-	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+	font-family: "Avenir-Roman";
+	src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
-#personsGrid{
+#personsGrid {
 	width: 100vw;
 	height: 100%;
 
@@ -676,17 +709,17 @@ main {
 
 	padding: var(--DoubleBorder);
 	padding: 9vw;
-/*	width: 100%;*/
+	/*	width: 100%;*/
 	box-sizing: border-box;
 }
 
-.personBubble{
+.personBubble {
 	width: 21vw;
 	width: 100%;
 	flex: 1 1 21vw;
 }
 
-.personBubble img{
+.personBubble img {
 	aspect-ratio: 1;
 	width: 100%;
 
@@ -697,6 +730,5 @@ main {
 	box-sizing: border-box;
 	filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
 	/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
-	border-color: #3C8251;
-
+	border-color: #3c8251;
 }</style><div id="personsGrid"><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div></div></main></body>

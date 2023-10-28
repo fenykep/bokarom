@@ -1,57 +1,77 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Room 1551</title><link rel="stylesheet" href="../../css/style.css"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><style>:root {
-	--Black: #4E4E4D;
-	--Primary: #68D18E;
-	--Accent: #FFFD61;
-	--Info: #454FE7;
-	--OffWhite: #F9F8F6;
+    --Black: #4e4e4d;
+    --Primary: #68d18e;
+    --Accent: #fffd61;
+    --Info: #454fe7;
+    --OffWhite: #f9f8f6;
 
-	--FullBorder: 4px;
-	--HalfBorder: calc(var(--FullBorder) / 2);
-	--DoubleBorder: calc(var(--FullBorder) * 2);
+    --FullBorder: 4px;
+    --HalfBorder: calc(var(--FullBorder) / 2);
+    --DoubleBorder: calc(var(--FullBorder) * 2);
 
-	--CardWidth: 90vw;
+    --CardWidth: 90vw;
 }
 
 @font-face {
-	font-family: 'Avenir-Roman';
-	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: "Avenir-Roman";
+    src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-
-#roomImage{
-	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
-	width: 100%;
-/*	transform: translateX(-5px);*/
-	border: 0;
-	margin-bottom: var(--DoubleBorder);
-	color: var(--Black);
+body {
+    margin: 0;
 }
 
-#roomImage img{
-	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
-	width: 100%;
-	height: 40vh;
-/*	on browser it could be a bit bigger though*/
-	height: 52vh;
-	object-fit: cover;
-	object-position: bottom;
-	border: 0;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--DoubleBorder);
 }
 
-#roomImage .roomFeaturesBox{
-	border: var(--DoubleBorder) solid var(--Black);
-	flex-flow: row wrap;
-	display: flex;
-	padding: var(--DoubleBorder);
-	gap: var(--DoubleBorder); 9vw;
-/*	color: var(--Black);*/
+#cardModal {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "Image Name"
+        "Image Room";
+
+    border: var(--DoubleBorder) solid var(--Black);
+    background-color: var(--OffWhite);
+    /*    border-radius: 10px;*/
+
+    width: var(--CardWidth);
+    aspect-ratio: 3;
+
+    font-family: "Avenir-Roman", sans-serif;
+    color: var(--Black);
 }
 
-#roomImage h1{
-    width: 100%;
+.fullSize#cardModal {
+    margin: var(--DoubleBorder);
+    width: unset;
+}
+
+#cardModal img {
+    grid-area: Image;
+    aspect-ratio: 1;
+    width: calc(100% - 20px);
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: var(--DoubleBorder) solid var(--Primary);
+
+    box-sizing: border-box;
+    margin: 10px;
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+    border-color: #3c8251;
+}
+
+#cardModal h1 {
+    grid-area: Name;
     margin: 0;
 
     align-self: center;
@@ -60,24 +80,18 @@
     font-size: calc(var(--CardWidth) / 20);
     align-self: end;
 
-	font-family: "Avenir-Roman", sans-serif;
-	text-decoration: underline;
-/*	color: var(--Black);*/
+    text-decoration: underline 1px solid var(--Black);
 
-/*    border-bottom: 4px solid;*/
+    /*    border-bottom: 4px solid;*/
 }
+#cardModal h2 {
+    grid-area: Room;
+    margin: 0;
+    align-self: baseline;
 
-#roomImage .roomFeaturesBox p{
-/*	flex: 1 1 21vw;*/
-	margin: 0;
-	flex-grow: 1;
-/*	color: var(--Black);*/
-}
-
-#roomImage .roomFeaturesBox p::before{
-	content: "• ";
-	color: var(--Primary);
-}</style><div id="roomImage"><img src="../../img/room1523.jpeg"><div class="roomFeaturesBox"><h1>Room 1551</h1><p>Kaffeekoeffizient: 5</p><p>Nordausrichtung</p><p>Whiteboard</p><p>Big Screen</p><p>Couch</p><p>Rothko</p></div></div><style>:root {
+    font-size: calc(var(--CardWidth) / 10);
+    font-weight: normal;
+}</style><div class="fullSize" id="cardModal"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"><h1>Dr. Karl Nixon</h1><h2>Raum 1551</h2></div><style>:root {
 	--Black: #4e4e4d;
 	--Primary: #68d18e;
 	--Accent: #fffd61;
