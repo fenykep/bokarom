@@ -6,22 +6,28 @@
 - start_time.setHours(8);
 - start_time.setMinutes(0);
 
-table
-  thead
-    tr
-      th
-      th Mon
-      th Tue
-      th Wed
-      th Thu
-      th Fri
-  tbody
-    - for (var i = 0; i < 40; i++)
-      - time_instances.push(start_time.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'}))
+- var smol = 0;
+
+
+mixin weekTable(smol=true)
+  style
+      include ../../css/weekTable.css
+  table(class={ smol: smol === true })#weekTable
+    thead
       tr
-        td= time_instances[i]
-        each id in ids
-          - finids[ids.indexOf(id)] = String(id + counter).padStart(3, '0')
-          td(id="dr" + finids[ids.indexOf(id)]) Data
-      - counter++;
-      - start_time.setMinutes(start_time.getMinutes() + 15)
+        th
+        th Mon
+        th Tue
+        th Wed
+        th Thu
+        th Fri
+    tbody
+      - for (var i = 0; i < 40; i++)
+        - time_instances.push(start_time.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'}))
+        tr
+          td= time_instances[i]
+          each id in ids
+            - finids[ids.indexOf(id)] = String(id + counter).padStart(3, '0')
+            td(id="dr" + finids[ids.indexOf(id)]) Data
+        - counter++;
+        - start_time.setMinutes(start_time.getMinutes() + 15)

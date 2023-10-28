@@ -33,8 +33,8 @@
 }
 
 #weekNoSelector div{
-	color: white;
-	background-color: var(--Info);
+	color: var(--Black);
+/*	background-color: var(--Info);*/
 }
 
 #weekNoSelector button{
@@ -45,10 +45,20 @@
 	cursor: pointer;
 	aspect-ratio: 1;
 	transition: all .3s;
+
+	font-family: "Avenir-Roman", sans-serif;
+	font-size: calc(var(--CardWidth) / 15);
+
+	line-height: 1em;
+	font-weight: bold;
+	color: var(--Black);
 }
 
 #weekNoSelector button:hover{
 	background-color: var(--Primary);
+	color: white;
+
+/*	border-color: white;*/
 }
 
 #weekNoSelector .prevWeekBtn{

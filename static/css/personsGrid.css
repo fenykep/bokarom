@@ -1,0 +1,57 @@
+:root {
+	--Black: #4E4E4D;
+	--Primary: #68D18E;
+	--Accent: #FFFD61;
+	--Info: #454FE7;
+	--OffWhite: #F9F8F6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: 'Avenir-Roman';
+	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#personsGrid{
+	width: 100vw;
+	height: 100%;
+
+	background-color: var(--OffWhite);
+	display: flex;
+	flex-flow: row-reverse wrap-reverse;
+	justify-content: space-evenly;
+	gap: 9vw;
+
+	padding: var(--DoubleBorder);
+	padding: 9vw;
+/*	width: 100%;*/
+	box-sizing: border-box;
+}
+
+.personBubble{
+	width: 21vw;
+	width: 100%;
+	flex: 1 1 21vw;
+}
+
+.personBubble img{
+	aspect-ratio: 1;
+	width: 100%;
+
+	object-fit: cover;
+	border-radius: 50%;
+	border: var(--DoubleBorder) solid var(--Primary);
+
+	box-sizing: border-box;
+	filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+	/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
+	border-color: #3C8251;
+
+}

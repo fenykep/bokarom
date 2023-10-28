@@ -8,8 +8,16 @@ body
   main
     include components/cardModal
     include components/weekNoSelector
+    include components/roomImage
+    include components/weekTable
+    include components/personsGrid
     +cardModal("Dr. Anne-Sophie Landwers",1456)
     +cardModal("Bob Ros","Home Office")
     +cardModal("Iris Schult","Urlaub")
     +weekNoSelector()
     +searchBar()
+    +roomImage()
+    +weekTable(false)
+    +weekTable()
+    +personsGrid(10)
+    

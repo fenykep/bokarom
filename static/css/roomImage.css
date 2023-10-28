@@ -1,0 +1,53 @@
+:root {
+	--Black: #4E4E4D;
+	--Primary: #68D18E;
+	--Accent: #FFFD61;
+	--Info: #454FE7;
+	--OffWhite: #F9F8F6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: 'Avenir-Roman';
+	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+#roomImage{
+	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+/*	transform: translateX(-5px);*/
+	border: 0;
+}
+
+#roomImage img{
+	width: calc(var(--CardWidth) + calc(var(--DoubleBorder) * 2));
+	border: 0;
+}
+
+#roomImage .roomFeaturesBox{
+	border: var(--DoubleBorder) solid var(--Black);
+}
+
+#roomImage h1{
+    
+    margin: 0;
+
+    align-self: center;
+
+    font-weight: normal;
+    font-size: calc(var(--CardWidth) / 20);
+    align-self: end;
+
+	font-family: "Avenir-Roman", sans-serif;
+	color: var(--Black);
+
+/*    border-bottom: 4px solid;*/
+}

@@ -1,0 +1,101 @@
+:root {
+	--Black: #4E4E4D;
+	--Primary: #68D18E;
+	--Accent: #FFFD61;
+	--Info: #454FE7;
+	--OffWhite: #F9F8F6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: 'Avenir-Roman';
+	src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#weekTable {
+/*    font-family: monospace;*/
+    font-family: "Avenir-Roman", sans-serif;
+/*    font-weight: bold;*/
+    font-size: 1.1em;
+/*    for avenir I have to use 1.1 for monospace 1.3*/
+/*    font-size: 1.3em;*/
+    width: 100%;
+    height: calc(100vh - 20px); /* Adjust as needed */
+    border-collapse: collapse;
+}
+
+#weekTable th, td {
+    border: 3px solid var(--Black);
+    padding: var(--DoubleBorder);
+    text-align: center;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#weekTable td:not(.occupied) {
+    color: var(--grey);
+    background-color: var(--OffWhite);
+}
+
+/* Apply styles to the first row (weekdays) */
+#weekTable th:first-child {
+    font-weight: bold;
+}
+
+#weekTable td:first-child{
+    font-family: monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Add a vertical scrollbar when content overflows the table body */
+#weekTable tbody {
+    max-height: calc(100vh - 100px); /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.smol#weekTable{
+	height: calc(25vh - 5px);
+}
+
+.smol#weekTable th, .smol#weekTable td{
+	width: 100%;
+	width: calc(100vw / 6);
+}
+/*
+.smol#weekTable td{
+	width: 100%;
+}
+*/
+.smol#weekTable tr{
+    display: none;
+}
+
+.smol#weekTable tr:nth-child(4n+1){
+    display: block;
+}
+
+#weekTable .occupied{
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+#weekTable .Sop{
+    border-bottom: dotted 5px lightcyan;
+}
+#weekTable .Nop{
+    border-top: solid 3px lightgreen;
+}
+
+#weekTable .selected {
+    border: 5px solid blue; /* Adjust the border thickness as needed */
+    background-color: lightblue; /* Adjust the background color to your preference */
+    color: black; /* Adjust text color as needed */
+}

@@ -4,23 +4,28 @@
     --white: #fff;
 }
 
-.dark {
-    --fullBlack: #000;
-    --grey: #ddd;
-    --white: #333;   
-}
-
-@font-face {
+/*@font-face {
     font-family: 'Avenir-Roman';
     src: url('fonts/Avenir-Roman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('../../fonts/Avenir-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+
 html {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 1.3em;
+/*    font-family: monospace;*/
+    font-family: "Avenir-Roman", sans-serif;
+/*    font-weight: bold;*/
+    font-size: 1.1em;
+/*    for avenir I have to use 1.1 for monospace 1.3*/
+/*    font-size: 1.3em;*/
 }
 
 body {
@@ -49,6 +54,12 @@ td:not(.occupied) {
 
 /* Apply styles to the first row (weekdays) */
 th:first-child {
+    font-weight: bold;
+}
+
+td:first-child{
+    font-family: monospace;
+    font-size: 1.3em;
     font-weight: bold;
 }
 

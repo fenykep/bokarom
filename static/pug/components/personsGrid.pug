@@ -1,0 +1,7 @@
+mixin personsGrid(count=10)
+	style
+		include ../../css/personsGrid.css
+	#personsGrid
+		- for(var x = 0;x < count;x++)
+			.personBubble
+				img(src='https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg')
