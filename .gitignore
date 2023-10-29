@@ -3,3 +3,4 @@ pygen/*.txt
 Cargo.lock
 target/
 *node_modules/
+*editproba/

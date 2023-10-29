@@ -67,7 +67,7 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
-    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%) hue-rotate(6deg);
     /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
     border-color: #3c8251;
 }
