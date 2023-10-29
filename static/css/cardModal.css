@@ -56,6 +56,10 @@ main {
     width: unset;
 }
 
+#cardModal *{
+    transition: all 0.25s;
+}
+
 #cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
@@ -83,8 +87,6 @@ main {
     align-self: end;
 
     text-decoration: underline 1px solid var(--Black);
-
-    /*    border-bottom: 4px solid;*/
 }
 #cardModal h2 {
     grid-area: Room;
