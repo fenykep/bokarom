@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title Room 1551
+		link(rel="stylesheet" href="../../css/style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body(style="")
+		//- .floorPlan(style="")
+			//- include ../img/RaumplanE15.svg
+
+		include components/cardModal
+		+cardModal("Dr. Karl Nixon",1551,true)
+		include ../img/editproba/RaumplanE15_rugs4.svg
+		script(src='../../js/floorPlan.js')
+		
