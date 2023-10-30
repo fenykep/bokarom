@@ -56,6 +56,10 @@ main {
     width: unset;
 }
 
+#cardModal *{
+    transition: all 0.25s;
+}
+
 #cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
@@ -67,7 +71,7 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
-    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%) hue-rotate(6deg);
     /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
     border-color: #3c8251;
 }
@@ -83,8 +87,6 @@ main {
     align-self: end;
 
     text-decoration: underline 1px solid var(--Black);
-
-    /*    border-bottom: 4px solid;*/
 }
 #cardModal h2 {
     grid-area: Room;
@@ -151,6 +153,10 @@ main {
     width: unset;
 }
 
+#cardModal *{
+    transition: all 0.25s;
+}
+
 #cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
@@ -162,7 +168,7 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
-    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%) hue-rotate(6deg);
     /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
     border-color: #3c8251;
 }
@@ -178,8 +184,6 @@ main {
     align-self: end;
 
     text-decoration: underline 1px solid var(--Black);
-
-    /*    border-bottom: 4px solid;*/
 }
 #cardModal h2 {
     grid-area: Room;
@@ -322,6 +326,10 @@ main {
     width: unset;
 }
 
+#cardModal *{
+    transition: all 0.25s;
+}
+
 #cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
@@ -333,7 +341,7 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
-    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%) hue-rotate(6deg);
     /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
     border-color: #3c8251;
 }
@@ -349,8 +357,6 @@ main {
     align-self: end;
 
     text-decoration: underline 1px solid var(--Black);
-
-    /*    border-bottom: 4px solid;*/
 }
 #cardModal h2 {
     grid-area: Room;
@@ -808,6 +814,8 @@ td {
 	width: 21vw;
 	width: 100%;
 	flex: 1 1 21vw;
+	cursor: pointer;
+/*	display: none;*/
 }
 
 .personBubble img {
@@ -822,4 +830,4 @@ td {
 	filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
 	/*with this filter applied to the background this is the closest color I found now that matches our primary.*/
 	border-color: #3c8251;
-}</style><div id="personsGrid"><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div></div></main></body>
+}</style><div id="personsGrid"><div class="personBubble" name="Sophie Fischer"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_02_20193517_WEB-Kopie-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble" name="Jan Müller"><img src="https://lindenpartners.eu/wp-content/uploads/2023/02/Image27-aspect-ratio-4-5-800x1000.jpeg"></div><div class="personBubble" name="Karl Nixon"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS-052021_0408_WEB-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble" name="Anna Schmidt"><img src="https://lindenpartners.eu/wp-content/uploads/2023/04/TPO_LP_-042023_0733_WEB-aspect-ratio-4-5-1-800x1000.jpg"></div><div class="personBubble" name="Hannah Becker"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_1064_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1001.jpg"></div><div class="personBubble" name="Emma Keller"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_1064_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1001.jpg"></div><div class="personBubble" name="Jan Müller"><img src="https://lindenpartners.eu/wp-content/uploads/2022/09/TPO_LP_082022_SL2_0586_WEB-aspect-ratio-4-5-1-800x1000.jpg"></div><div class="personBubble" name="Emma Keller"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS-052021_0408_WEB-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble" name="Jan Müller"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_02_20193517_WEB-Kopie-scaled-aspect-ratio-4-5-800x1000.jpg"></div><div class="personBubble" name="Anna Schmidt"><img src="https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0929_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"></div></div></main></body>

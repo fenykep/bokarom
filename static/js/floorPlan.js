@@ -67,7 +67,7 @@ const dataDict = {
 };
 
 document.querySelectorAll('.roomBackgroundPlain').forEach(element => {
-    element.addEventListener("click", () => {
+    element.addEventListener("mouseover", () => {
         console.log(element.id);
         const nameHeader = document.querySelector("#cardModal h1");
         const roomNoHeader = document.querySelector("#cardModal h2");
@@ -87,5 +87,13 @@ document.querySelectorAll('.roomBackgroundPlain').forEach(element => {
                 document.querySelector("#cardModal h2").innerText = dataDict[element.id];
             }
         },250);
+    });
+    element.addEventListener("click", () => {
+        console.log(element.id);
+        if(typeof dataDict[element.id] === 'number'){
+            window.location.href='roomWeek.html?room=Room_'+dataDict[element.id];
+        } else{
+            window.location.href='roomWeek.html?room='+dataDict[element.id];
+        }
     });
 });

@@ -5,11 +5,11 @@ html(lang="en")
 		title Room 1551
 		link(rel="stylesheet" href="../../css/style.css")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-	body
+	body(onload="document.querySelector('#cardModal h1').innerText = window.location.search.substring(1).split('&')[0].split('=')[1].replace('_',' ')")
 		include components/weekTable.pug
 		include components/cardModal
 		include components/weekNoSelector
 
 		+cardModal("Dr. Karl Nixon",1551,true)
-		+weekNoSelector(3)
+		+weekNoSelector(44)
 		+weekTable(true)

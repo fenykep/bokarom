@@ -39,6 +39,8 @@
 	width: 21vw;
 	width: 100%;
 	flex: 1 1 21vw;
+	cursor: pointer;
+/*	display: none;*/
 }
 
 .personBubble img {

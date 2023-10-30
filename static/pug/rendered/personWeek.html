@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Room 1551</title><link rel="stylesheet" href="../../css/style.css"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><style>:root {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Room 1551</title><link rel="stylesheet" href="../../css/style.css"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body onload="document.querySelector('#cardModal h1').innerText = window.location.search.substring(1).split('&amp;')[0].split('=')[1].replace('_',' ')"><style>:root {
     --Black: #4e4e4d;
     --Primary: #68d18e;
     --Accent: #fffd61;
@@ -56,6 +56,10 @@ main {
     width: unset;
 }
 
+#cardModal *{
+    transition: all 0.25s;
+}
+
 #cardModal img {
     grid-area: Image;
     aspect-ratio: 1;
@@ -67,7 +71,7 @@ main {
 
     box-sizing: border-box;
     margin: 10px;
-    filter: brightness(159.3%) grayscale(22.4%) contrast(110%);
+    filter: brightness(159.3%) grayscale(22.4%) contrast(110%) hue-rotate(6deg);
     /*with this filter applied to the background this is the closest color I found now that matches our primary.*/
     border-color: #3c8251;
 }
@@ -83,8 +87,6 @@ main {
     align-self: end;
 
     text-decoration: underline 1px solid var(--Black);
-
-    /*    border-bottom: 4px solid;*/
 }
 #cardModal h2 {
     grid-area: Room;
@@ -169,7 +171,7 @@ main {
 
 #weekNoSelector .nextWeekBtn {
 	border-right: 0;
-}</style><div class="fullSize" id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week 3</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
+}</style><div class="fullSize" id="weekNoSelector"><button class="prevWeekBtn" onclick="weekSwitcher(false)"><</button><div>Week 44</div><button class="nextWeekBtn" onclick="weekSwitcher(true)">></button></div><script src="../../js/weekSwitcher.js"></script><style>:root {
     --Black: #4e4e4d;
     --Primary: #68d18e;
     --Accent: #fffd61;
