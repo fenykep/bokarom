@@ -1,40 +1,46 @@
 var idToken = {
     "hexID":"3c",
     "hexAlias":"3c",
-    "allowedAlia":["3c","11"]
+    "allowedAlia":["11"]
 }
 
 const lookupData = {
   "ff": {
     "hexColor": "#FF5733",
-    "fullName": "John Doe",
+    "fullName": "Clarissa von Bormann",
     "email": "john.doe@example.com",
-    "allowedAlia":["ff"]
+    "allowedAlia":[],
+    "favRooms":[]
   },
   "11": {
     "hexColor": "#41FF33",
-    "fullName": "Jane Smith",
+    "fullName": "Dr. Matthias Birkholz",
     "email": "jane.smith@example.com",
-    "allowedAlia":["11"]
+    "allowedAlia":[],
+    "favRooms":[]
   },
   "3c": {
     "hexColor": "#3344FF",
-    "fullName": "Mary Johnson",
+    "fullName": "Dr. Wiebke Thurm",
     "email": "mary.johnson@example.com",
-    "allowedAlia":["3c","11"]
+    "allowedAlia":["11"],
+    "favRooms":[]
   },
-  "7a": {
+  "01": {
     "hexColor": "#FF3388",
-    "fullName": "Robert Brown",
+    "fullName": "Dr. Bodo von Wolff",
     "email": "robert.brown@example.com",
-    "allowedAlia":["7a"]
+    "allowedAlia":[],
+    "favRooms":[]
   },
-  "b2": {
+
+  "08": {
     "hexColor": "#AA88FF",
-    "fullName": "Emily Davis",
+    "fullName": "Daniel Bögeholz",
     "email": "emily.davis@example.com",
-    "allowedAlia":["b2"]
-  }
+    "allowedAlia":[],
+    "favRooms":[]
+  },
 }
 
 function hexStringToArray(hexString) {
@@ -152,7 +158,13 @@ socket.addEventListener('open', (event) => {
 
     let aliasSelector = document.querySelector("#aliasSelector");
 
-    if (idToken.allowedAlia.length > 1) {
+    if (idToken.allowedAlia.length > 0) {
+        // bc now we dont store the users own code in the alia list
+        // if it has ani alia then we just append their own to that list when needed
+        var option = document.createElement("option");
+        option.value = idToken.hexID;
+        option.text = lookupData[idToken.hexID].fullName;
+        selectElement.appendChild(option);
         // Loop through the array and create an <option> element for each value
         for (var i = 0; i < idToken.allowedAlia.length; i++) {
             var option = document.createElement("option");
@@ -208,9 +220,11 @@ socket.addEventListener('error', (event) => {
 
 // second delete pointer // delete // const hexString ="00111111000000000000000000000000000000000011111111111100000000000000003c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000000000";
 // second delete pointer // delete // hexString ="00111111000000000000000000000000000000000011111111111100000000000000003c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000000000";
-const wordArray = hexStringToArray(hexString);
-console.log(wordArray);
-colorOccupied(wordArray);
+if (hexString) {
+    const wordArray = hexStringToArray(hexString);
+    console.log(wordArray);
+    colorOccupied(wordArray);
+}
 
 
 
