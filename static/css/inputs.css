@@ -1,0 +1,26 @@
+:root {
+	--Black: #4e4e4d;
+	--Primary: #68d18e;
+	--Accent: #fffd61;
+	--Info: #454fe7;
+	--OffWhite: #f9f8f6;
+
+	--FullBorder: 4px;
+	--HalfBorder: calc(var(--FullBorder) / 2);
+	--DoubleBorder: calc(var(--FullBorder) * 2);
+
+	--CardWidth: 90vw;
+}
+
+@font-face {
+	font-family: "Avenir-Roman";
+	src: url("../../fonts/Avenir-Roman.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+button{
+	border: solid var(--FullBorder) var(--Black);
+	background-color: var(--OffWhite);
+	color: var(--Black);
+}

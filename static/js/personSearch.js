@@ -15,6 +15,7 @@ searchBar.addEventListener("input" , () => {
 
 document.querySelectorAll('.personBubble').forEach(bubble => {
 	bubble.addEventListener("click", () => {
-		window.location.href='personWeek.html?pers='+bubble.getAttribute('name').replace(' ','_');
+		// window.location.href='personWeek.html?pers='+bubble.getAttribute('name').replace(' ','_');
+		jank('p');
 	});
 });

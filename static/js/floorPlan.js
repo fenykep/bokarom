@@ -3,35 +3,35 @@
 // with the 14.OG
 
 const germanNames = [
-    "Jan Müller",
-    "Anna Schmidt",
-    "Lukas Weber",
-    "Sophie Fischer",
-    "Max Wagner",
-    "Hannah Becker",
-    "Paul Richter",
-    "Lea Schäfer",
-    "Felix Schuster",
-    "Emma Keller",
+    "Clarissa von Bormann",
+    "Dr. Matthias Birkholz",
+    "Dr. Wiebke Thurm",
+    "Dr. Bodo von Wolff",
+    "Daniel Bögeholz",
+    "Nico-Santino Schubart",
+    "Dr. Nina Scherber",
+    "Michael Kohl",
+    "Jessica Glaser",
+    "Dr. Maximilian Grubert",
 ];
 
 const imageList = [
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_052022_0283_V2_WEB-aspect-ratio-4-5-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/09/TPO_LP_082022_SL2_0586_WEB-aspect-ratio-4-5-1-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0929_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2023/04/TPO_LP_-042023_0733_WEB-aspect-ratio-4-5-1-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_1064_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1001.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS-052021_0408_WEB-aspect-ratio-4-5-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2023/02/Image27-aspect-ratio-4-5-800x1000.jpeg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_02_20193517_WEB-Kopie-scaled-aspect-ratio-4-5-800x1000.jpg",
-    "https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_P2_0327_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg",
+    "../../img/perso/ff.jpg",
+    "../../img/perso/11.jpg",
+    "../../img/perso/3c.jpg",
+    "../../img/perso/01.jpg",
+    "../../img/perso/08.jpg",
+    "../../img/perso/12.jpg",
+    "../../img/perso/14.jpg",
+    "../../img/perso/15.jpg",
+    "../../img/perso/16.jpg",
+    "../../img/perso/17.jpg",
 ];
 
 // Function to select a random name
 function getRandomGermanName() {
     const randomIndex = Math.floor(Math.random() * germanNames.length);
-    // return germanNames[randomIndex];
+    console.log(randomIndex);
     return {
         name: germanNames[randomIndex],
         image: imageList[randomIndex],
@@ -76,8 +76,9 @@ document.querySelectorAll('.roomBackgroundPlain').forEach(element => {
         roomNoHeader.style.opacity=0;
         cardImage.style.opacity=0;
         setTimeout(()=>{
-            nameHeader.innerText = getRandomGermanName().name;
-            cardImage.src = getRandomGermanName().image;
+            const { name, image } = getRandomGermanName();
+            nameHeader.innerText = name;
+            cardImage.src = image;
             nameHeader.style.opacity=1;
             roomNoHeader.style.opacity=1;
             cardImage.style.opacity=1;
@@ -91,9 +92,11 @@ document.querySelectorAll('.roomBackgroundPlain').forEach(element => {
     element.addEventListener("click", () => {
         console.log(element.id);
         if(typeof dataDict[element.id] === 'number'){
-            window.location.href='roomWeek.html?room=Room_'+dataDict[element.id];
+            // window.location.href='roomWeek.html?room=Room_'+dataDict[element.id];
+            jank('r');
         } else{
-            window.location.href='roomWeek.html?room='+dataDict[element.id];
+            // window.location.href='roomWeek.html?room='+dataDict[element.id];
+            jank('r');
         }
     });
 });

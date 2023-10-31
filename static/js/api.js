@@ -33,7 +33,6 @@ const lookupData = {
     "allowedAlia":[],
     "favRooms":[]
   },
-
   "08": {
     "hexColor": "#AA88FF",
     "fullName": "Daniel Bögeholz",
@@ -41,7 +40,42 @@ const lookupData = {
     "allowedAlia":[],
     "favRooms":[]
   },
-}
+  "12": {
+    "hexColor": "#CC44AA",
+    "fullName": "Nico-Santino Schubart",
+    "email": "emily.davis@example.com",
+    "allowedAlia":[],
+    "favRooms":[]
+  },
+  "14": {
+    "hexColor": "#FFBB44",
+    "fullName": "Dr. Nina Scherber",
+    "email": "emily.davis@example.com",
+    "allowedAlia":[],
+    "favRooms":[]
+  },
+  "15": {
+    "hexColor": "#33CCAA",
+    "fullName": "Michael Kohl",
+    "email": "emily.davis@example.com",
+    "allowedAlia":[],
+    "favRooms":[]
+  },
+  "16": {
+    "hexColor": "#CCBB44",
+    "fullName": "Jessica Glaser",
+    "email": "emily.davis@example.com",
+    "allowedAlia":[],
+    "favRooms":[]
+  },
+  "17": {
+    "hexColor": "#CC77AA",
+    "fullName": "Dr. Maximilian Grubert",
+    "email": "emily.davis@example.com",
+    "allowedAlia":[],
+    "favRooms":[]
+  },
+}   
 
 function hexStringToArray(hexString) {
     if (hexString.length % 2 !== 0) {
@@ -148,7 +182,7 @@ var hexString;
 
 const serverIP = window.location.hostname;
 const socket = new WebSocket('ws://'+serverIP+':8080');
-// const socket = new WebSocket('ws://192.168.45.33:8080');
+// const socket = new WebSocket('ws://192.168.45.161:8080');
 
 let selectElement = document.querySelector("#alias-select");
 
