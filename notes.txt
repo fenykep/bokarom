@@ -32,3 +32,8 @@ favorites and it should also have an endpoint at the DB so it can quickly querry
 
 
 !!!!! -- Óraátállítás -- !!!!!
+
+# to convert from our 400 character thing to 200byte binary
+xxd -r -p alap.txt > csoda.txt
+# and to convert back
+xxd -p -c0 csoda.txt | tr -d '\n' > bacsoda.txt
