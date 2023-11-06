@@ -4,3 +4,4 @@ Cargo.lock
 target/
 *node_modules/
 *editproba/
+static/pug/rendered/
