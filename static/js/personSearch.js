@@ -1,5 +1,6 @@
 const searchBar = document.querySelector("#searchBar");
 
+//This obviously has to be better
 searchBar.addEventListener("input", () => {
 	console.log(searchBar.value);
 	document.querySelectorAll(".personBubble").forEach((bubble) => {

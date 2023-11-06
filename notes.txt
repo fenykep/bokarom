@@ -37,3 +37,5 @@ favorites and it should also have an endpoint at the DB so it can quickly querry
 xxd -r -p alap.txt > csoda.txt
 # and to convert back
 xxd -p -c0 csoda.txt | tr -d '\n' > bacsoda.txt
+
+Prolly youll have to keep track of a bit of a history, as you controll navigation and all
