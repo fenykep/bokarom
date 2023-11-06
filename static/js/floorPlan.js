@@ -2,42 +2,24 @@
 // and we are likely to have conflicts
 // with the 14.OG
 
-const germanNames = [
-    "Clarissa von Bormann",
-    "Dr. Matthias Birkholz",
-    "Dr. Wiebke Thurm",
-    "Dr. Bodo von Wolff",
-    "Daniel Bögeholz",
-    "Nico-Santino Schubart",
-    "Dr. Nina Scherber",
-    "Michael Kohl",
-    "Jessica Glaser",
-    "Dr. Maximilian Grubert",
-];
-
-const imageList = [
-    "../../img/perso/ff.jpg",
-    "../../img/perso/11.jpg",
-    "../../img/perso/3c.jpg",
-    "../../img/perso/01.jpg",
-    "../../img/perso/08.jpg",
-    "../../img/perso/12.jpg",
-    "../../img/perso/14.jpg",
-    "../../img/perso/15.jpg",
-    "../../img/perso/16.jpg",
-    "../../img/perso/17.jpg",
-];
-
 // Function to select a random name
-function getRandomGermanName() {
-    const randomIndex = Math.floor(Math.random() * germanNames.length);
-    console.log(randomIndex);
+function getRandomPerson() {
+    let keys = Object.keys(persLookup);
+    // the 0 bang is for rounding
+    let indexInt = (keys.length * Math.random() << 0);
     return {
-        name: germanNames[randomIndex],
-        image: imageList[randomIndex],
+        name: persLookup[keys[indexInt]].fullName,
+        image: "../../img/perso/"+keys[indexInt]+".jpg",
     };
 }
 
+// var randomValueFromObject = function (obj) {
+//     var keys = Object.keys(obj);
+//     return obj[keys[ keys.length * Math.random() << 0]];
+// };
+
+
+// Ill have to edit this in the svg :(
 const dataDict = {
     rect12570: 1503,
     rect12568: 1504,
@@ -76,7 +58,7 @@ document.querySelectorAll('.roomBackgroundPlain').forEach(element => {
         roomNoHeader.style.opacity=0;
         cardImage.style.opacity=0;
         setTimeout(()=>{
-            const { name, image } = getRandomGermanName();
+            const { name, image } = getRandomPerson();
             nameHeader.innerText = name;
             cardImage.src = image;
             nameHeader.style.opacity=1;

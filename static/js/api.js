@@ -118,7 +118,7 @@ async function colorOccupied(weekArray) {
                 } else {
                     console.error(`Entry with key '${key}' not found.`);
                 }
-		// here hanfle smol weekTables?
+                // here handle smol weekTables?
                 element.classList.add('occupied');
                 if (index%40!=39) {
                     if (weekArray[index+1] == slot){

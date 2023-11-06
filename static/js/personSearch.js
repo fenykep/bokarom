@@ -20,6 +20,7 @@ searchBar.addEventListener("input", () => {
 
 document.querySelectorAll(".personBubble").forEach((bubble) => {
 	bubble.addEventListener("click", () => {
+		console.log("goto this pers: "+bubble.getAttribute('name'));
 		// window.location.href='personWeek.html?pers='+bubble.getAttribute('name').replace(' ','_');
 		jank("p");
 	});

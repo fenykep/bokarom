@@ -68,8 +68,8 @@ persLookup = {
     "email": "emily.davis@example.com",
     "allowedAlia":[],
     "favRooms":[]
-  },
-}
+  }
+};
 
 roomLookup = {
   "12": {
@@ -108,4 +108,4 @@ roomLookup = {
     "hexColor": "#FF5733",
     "roomName": "Room 1543"
   },
-}   
+};

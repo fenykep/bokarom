@@ -42,6 +42,7 @@ function toggleElements(
 toggleElements(0, 0, 0, 0, 0, 0, 0); // reset
 
 function jank(urlChar) {
+    console.log(todayWeekNo);
     switch (urlChar) {
         case "f":
             toggleElements(1, 0, 0, 0, 0, 0, 1); // floorView
