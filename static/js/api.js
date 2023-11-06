@@ -98,6 +98,8 @@ function leftPad(number, width, paddingChar) {
     return padding + numString;
 }
 
+// this could be more effective if you only parsed the 
+// DOM elements that you need to change
 async function colorOccupied(weekArray) {
     if (lookupData) {
         weekArray.forEach(function (slot, index) {
@@ -116,8 +118,8 @@ async function colorOccupied(weekArray) {
                 } else {
                     console.error(`Entry with key '${key}' not found.`);
                 }
+		// here hanfle smol weekTables?
                 element.classList.add('occupied');
-                // console.log('index: '+index+' %40= '+index%40);
                 if (index%40!=39) {
                     if (weekArray[index+1] == slot){
                         element.classList.add('Sop');
@@ -134,6 +136,8 @@ async function colorOccupied(weekArray) {
 
 }
 
+// this is the fx called at ws msg,
+// strip header here
 function setHexString(newHexString){
     hexString = newHexString;
     colorOccupied(hexStringToArray(newHexString));
@@ -170,16 +174,12 @@ var reserveMask ="00000000000000000000000000000000000000000000000000000000000000
 // var reserveMask;
 // reSetReserveMask();
 
-//const hexString ="0011223344556677889900aabbccddeeff0011223344556677889900aabbccddeeff0011223344556677889900aabbccddeeff0000000000000000000000000000000000000000000000000000000000000000000000000000011223344556677889000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011223344556677889900aabbccddeeff0011223344556677889900aabbccddeeff00000000000000000000000000000000";
-// var hexString ="00111111000000000000000000000000000000000011111111111100000000000000003c3c3c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111110000000000000000000000000000000000000000000000000000";
-
 
 var hexString;
-// "0000000000000000000000000000000000000000000000000000000000000000000000000000011223344556677889000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000112233445566778890000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 // const wordArray = hexStringToArray(hexString);
-// console.log(wordArray);
 // colorOccupied(wordArray);
 
+// assuming ws and http on same server
 const serverIP = window.location.hostname;
 const socket = new WebSocket('ws://'+serverIP+':8080');
 // const socket = new WebSocket('ws://192.168.45.161:8080');
