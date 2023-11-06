@@ -1,15 +1,9 @@
-- const germanNames = ["Jan Müller","Anna Schmidt","Lukas Weber","Sophie Fischer","Max Wagner","Hannah Becker","Paul Richter","Lea Schäfer","Karl Nixon","Emma Keller"]
-
-- const imageList = ["https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_052022_0283_V2_WEB-aspect-ratio-4-5-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2022/09/TPO_LP_082022_SL2_0586_WEB-aspect-ratio-4-5-1-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0929_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2023/04/TPO_LP_-042023_0733_WEB-aspect-ratio-4-5-1-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_0659_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_1064_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1001.jpg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS-052021_0408_WEB-aspect-ratio-4-5-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2023/02/Image27-aspect-ratio-4-5-800x1000.jpeg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_02_20193517_WEB-Kopie-scaled-aspect-ratio-4-5-800x1000.jpg","https://lindenpartners.eu/wp-content/uploads/2022/08/TPO_LINDENPARTNERS_062018_P2_0327_WEB-Kopie-2-scaled-aspect-ratio-4-5-800x1000.jpg"];
-
 mixin personsGrid(count=6)
 	style
 		include ../../css/personsGrid.css
+	script(src='../../js/pLookUp.js')
 	#personsGrid
-		- for(var x = 0; x < count; x++)
-			- const randomName = germanNames[Math.floor(Math.random() * germanNames.length)]
-			- const randomImage = imageList[Math.floor(Math.random() * imageList.length)]
-			.personBubble(name=randomName)
-				img(src=randomImage)
-
-
+		- for (var hexID in persLookup)
+			- const person = persLookup[hexID]
+			.personBubble(name=person.fullName hexID=hexID)
+				img(src="../../img/perso/"+hexID+".jpg")

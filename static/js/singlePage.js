@@ -1,6 +1,6 @@
 const app = {
     currentPage: null,
-    currentView: "H",
+    currentView: "h",
     currentID: "00",
     currentWeek: "42",
     setPage(page) {
@@ -8,6 +8,12 @@ const app = {
         document.getElementById("content").textContent =
             "Current Page: " + page;
     },
+    setWeek(week) {
+        this.currentWeek = week;
+    },
+    setID(idToset) {
+        this.currentID = idToset;
+    }
 };
 
 function toggleElements(
@@ -46,18 +52,23 @@ function jank(urlChar) {
     switch (urlChar) {
         case "f":
             toggleElements(1, 0, 0, 0, 0, 0, 1); // floorView
+            app.currentView = "f";
             break;
         case "s":
             toggleElements(0, 1, 0, 0, 0, 1, 0); // searchView
+            app.currentView = "s";
             break;
         case "r":
             toggleElements(0, 0, 1, 1, 1, 0, 0); // roomView
+            app.currentView = "r";
             break;
         case "p":
             toggleElements(1, 0, 0, 1, 1, 0, 0); // personView
+            app.currentView = "p";
             break;
         default:
             toggleElements(0, 0, 0, 0, 0, 0, 0); // reset
+            app.currentView = "h";
     }
 }
 

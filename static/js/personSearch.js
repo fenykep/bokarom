@@ -21,7 +21,8 @@ searchBar.addEventListener("input", () => {
 document.querySelectorAll(".personBubble").forEach((bubble) => {
 	bubble.addEventListener("click", () => {
 		console.log("goto this pers: "+bubble.getAttribute('name'));
-		// window.location.href='personWeek.html?pers='+bubble.getAttribute('name').replace(' ','_');
+		console.log("goto this hexID: "+bubble.getAttribute('hexID'));
+		app.setID(bubble.getAttribute('hexID'));
 		jank("p");
 	});
 });
