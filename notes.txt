@@ -44,3 +44,6 @@ function makeDisappear(what){
   what.opacity=0;
   setTimeout(()=>what.style.display="hidden";250);
 }
+
+flexburo person should only have one entry per day
+
