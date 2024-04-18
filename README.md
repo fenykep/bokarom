@@ -9,3 +9,13 @@ serving javascript that interacts with the websockets server
 
 In that folder there is an index.html, that binds to the 8080 port of the same IP
 it was served from, estabilishes a websockets connection and then updates the UI with the values received from the broadcast channel of the server.
+
+So currently it is a huge mess, but the viewer part of the app could be accessed through
+{ipaddress}:3030/pug/rendered/singlePage.html
+and then a jank({char}) function has to be called where 
+char {
+	'f':floorView,
+	's':searchView,
+	'r':roomView,
+	'p':personView
+} 
