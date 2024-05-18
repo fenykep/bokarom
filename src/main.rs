@@ -1,20 +1,19 @@
+use chrono::{Datelike, NaiveDate, NaiveDateTime, TimeZone, Utc, Weekday};
+use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
+use local_ip_address::local_ip;
 use log::info;
 use std::fs::File;
 use std::io;
 use std::io::{Read, Write};
 use std::sync::Arc;
-use warp::Filter;
-use chrono::{Datelike, NaiveDate, NaiveDateTime, TimeZone, Utc, Weekday};
-use futures_util::{future, SinkExt, StreamExt, TryStreamExt};
-use local_ip_address::local_ip;
 use std::{collections::HashSet, env, io::Error};
 use tokio::net::{TcpListener, TcpStream};
 use tokio::sync::Mutex;
 use tokio_tungstenite::accept_async;
 use tokio_tungstenite::tungstenite::protocol::Message;
+use warp::Filter;
 
-
-// this is now new, uncoplete, first set static to r0142 then 
+// this is now new, uncoplete, first set static to r0142 then
 // youll have to start the pers/week/room muxing
 fn write_content_to_file<T: AsRef<str>>(file_path: &str, content: T) -> Result<(), std::io::Error> {
     let mut file = File::create(file_path)?;
