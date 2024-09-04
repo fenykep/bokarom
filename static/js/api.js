@@ -98,7 +98,7 @@ function leftPad(number, width, paddingChar) {
     return padding + numString;
 }
 
-// this could be more effective if you only parsed the 
+// this could be more effective if you only parsed the
 // DOM elements that you need to change
 async function colorOccupied(weekArray) {
     if (lookupData) {
